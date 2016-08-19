@@ -127,7 +127,10 @@ $(document).ready(function () {
 <li><a href="#lists-and-dictionaries"><span class="toc-section-number">2.3</span> Lists and Dictionaries</a></li>
 <li><a href="#reading-data-into-r"><span class="toc-section-number">2.4</span> Reading Data Into R</a></li>
 </ul></li>
-<li><a href="#rmarkdown"><span class="toc-section-number">3</span> RMarkdown</a></li>
+<li><a href="#working-with-data-frames"><span class="toc-section-number">3</span> Working with Data Frames</a><ul>
+<li><a href="#aggregate"><span class="toc-section-number">3.1</span> Aggregate</a></li>
+</ul></li>
+<li><a href="#rmarkdown"><span class="toc-section-number">4</span> RMarkdown</a></li>
 </ul>
 </div>
 
@@ -240,8 +243,47 @@ subaru.costs$Forester</code></pre>
 </table>
 </div>
 </div>
+<div id="working-with-data-frames" class="section level1">
+<h1><span class="header-section-number">3</span> Working with Data Frames</h1>
+<div id="aggregate" class="section level2">
+<h2><span class="header-section-number">3.1</span> Aggregate</h2>
+<p>The <em>aggregate()</em> function allows you to collapse a data frame by certain variables and apply a certain function. The general usage is:</p>
+<p><em>aggregate(var1 ~ var2 + var3, data=mydata, FUN=function_to_apply)</em></p>
+<p>For instance, let’s say we have some data about car prices. As you can see below, there are multiple entries for some makes of cars:</p>
+<pre class="r"><code>car.makes = c('Subaru', 'Subaru', 'Ford', 'Toyota', 'Ford', 'Subaru')
+car.models = c('Forester', 'Impreza', 'Focus', 'Camry', 'F150', 'Forester')
+car.prices = c(24500, 34900, 18000, 21750, 27300, 23000)
+df = data.frame(Make = car.makes, Model = car.models, Price = car.prices)
+df</code></pre>
+<pre><code>##     Make    Model Price
+## 1 Subaru Forester 24500
+## 2 Subaru  Impreza 34900
+## 3   Ford    Focus 18000
+## 4 Toyota    Camry 21750
+## 5   Ford     F150 27300
+## 6 Subaru Forester 23000</code></pre>
+<p>If we wanted to have a dataframe that average the price for each make, we can use the aggregate function to do this:</p>
+<pre class="r"><code>df.agg = aggregate(Price ~ Make, data = df, FUN = mean)
+df.agg</code></pre>
+<pre><code>##     Make    Price
+## 1   Ford 22650.00
+## 2 Subaru 27466.67
+## 3 Toyota 21750.00</code></pre>
+<p>Now we can see the average price for each make of car. You’ll notice that <em>Model</em> no longer exists in the dataframe. We asked R to average the price for each make of car. If we want R to average the price for each make <em>and</em> model, we can do this:</p>
+<pre class="r"><code>df.agg = aggregate(Price ~ Make + Model, data = df, FUN = mean)
+df.agg</code></pre>
+<pre><code>##     Make    Model Price
+## 1 Toyota    Camry 21750
+## 2   Ford     F150 27300
+## 3   Ford    Focus 18000
+## 4 Subaru Forester 23750
+## 5 Subaru  Impreza 34900</code></pre>
+<p>The only model in <em>df</em> that had two entries was the Subaru Forester, so that is the only one that did any averaging.</p>
+<p><strong>Note</strong>: the paramater <em>FUN</em> is extremely powerful! Not only can you specify <em>mean</em> or <em>sum</em>, but you can write you own user-specific function to be applied! See <a href="https://www.r-bloggers.com/aggregate-a-powerful-tool-for-data-frame-in-r/">here</a> for some pretty advanced examples.</p>
+</div>
+</div>
 <div id="rmarkdown" class="section level1">
-<h1><span class="header-section-number">3</span> RMarkdown</h1>
+<h1><span class="header-section-number">4</span> RMarkdown</h1>
 <p>RStudio has produced an excellent <a href="https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf">cheat sheet</a> which I reference often. No need to duplicate the awesome work they already did.</p>
 </div>
 
