@@ -101,6 +101,22 @@ Option | Description
 *skip* | Number of lines at the top of the file to skip, useful for skipping comments in the file.
 *stringsAsFactors* | Indiciates whether to convert string variables to factors. The default is **TRUE**, so make sure to set to **FALSE** if you do not want a column of strings converted to factors. Setting to **FALSE** can really speed up processing time for large files.
 
+## Grabbing data from the web
+
+See RIA | 38
+
+Lot's of APIs exist to interact with specific web interfaces, such as:
+
+* [twitteR](https://cran.r-project.org/web/packages/twitteR/twitteR.pdf)
+    + [Setting up account](http://bigcomputing.blogspot.com/2016/02/the-twitter-r-package-by-jeff-gentry-is.html)
+    + [YouTube example](https://www.youtube.com/watch?v=8mSmK3Pid7w)
+    + [Web example 1](http://davetang.org/muse/2013/04/06/using-the-r_twitter-package/)
+    + [Web example 2](http://www.r-datacollection.com/blog/TwitteR2Mongo/)
+* [RFacebook](https://cran.r-project.org/web/packages/Rfacebook/Rfacebook.pdf)
+    + [Web example](http://thinktostart.com/analyzing-facebook-with-r/)
+    
+There are a lot more packages that work with specific web APIs. A full list can be found [here](https://cran.r-project.org/web/views/WebTechnologies.html).
+
 # Working with Data Frames
 
 ## Aggregate
