@@ -8,7 +8,7 @@ permalink: /:year/:month/:day/:title.html
 # relative_permalinks: true
 
 # Setup
-title:            
+title:            bhlmn
 tagline:          ''
 description:      "I'm Bryan. I blog about R and data science."
 baseurl: "" # If you are making a gh-pages project blog, this is
