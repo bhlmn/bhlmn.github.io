@@ -11,7 +11,7 @@ permalink: /:year/:month/:day/:title.html
 title:            bhlmn
 tagline:          ''
 description:      "I'm Bryan. I blog about R and data science."
-baseurl: "" # If you are making a gh-pages project blog, this is
+baseurl: "/" # If you are making a gh-pages project blog, this is
                         # the name of your project repo, preceded by a /'
                         # Set it to just "/" if you are making a user page.
 
