@@ -11,20 +11,20 @@
 
   <title>
     
-      bhlmn &middot; 
+      b|hlmn &middot; 
     
   </title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/public/css/poole.css">
-  <link rel="stylesheet" href="/public/css/syntax.css">
-  <link rel="stylesheet" href="/public/css/hyde.css">
-  <link rel="stylesheet" href="/public/css/custom.css">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//public/css/poole.css">
+  <link rel="stylesheet" href="//public/css/syntax.css">
+  <link rel="stylesheet" href="//public/css/lanyon.css">
+  <link rel="stylesheet" href="//public/css/custom.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
 
   <!-- Icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="public/apple-touch-icon-144-precomposed.png">
-                                 <link rel="shortcut icon" href="public/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="//public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="//public/favicon.ico">
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
@@ -33,80 +33,86 @@
   <script type="text/javascript"
             src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     </script>
+  <script type="text/javascript" src="//public/js/mathjaxcustom.js"></script>
     
     <!--Disqus comment counts-->
     <script id="dsq-count-scr" src="//https-bhlmn-github-io.disqus.com/count.js" async></script>
     
+  
 </head>
 
 
-  <body class="theme-base-0d">
+  <body>
 
-    <div class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <h1>
-        <a href="">
-          bhlmn
-        </a>
-      </h1>
-      <p class="lead">I'm Bryan. I blog about R and data science.</p>
-    </div>
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
 
-    <nav class="sidebar-nav">
-      <a class="sidebar-nav-item" href="">Home</a>
-
-      
-
-      
-      
-        
-          
-        
-      
-        
-      
-        
-          
-            <a class="sidebar-nav-item" href="/about.html">About</a>
-          
-        
-      
-        
-          
-            <a class="sidebar-nav-item" href="/archive.html">Archives</a>
-          
-        
-      
-        
-      
-        
-          
-            <a class="sidebar-nav-item" href="/categories.html">Categories</a>
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-      <a class="sidebar-nav-item" href="https://github.com/bhlmn">GitHub</a>
-      <a class="sidebar-nav-item" href="https://twitter.com/bhlmn">Twitter</a>
-    </nav>
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>My name is Bryan. I blog about R and data science.</p>
   </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/">Home</a>
+
+    
+
+      
+      
+        
+          
+        
+      
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="//about.html">About</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="//archive.html">Archives</a>
+          
+        
+      
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="//categories.html">Categories</a>
+          
+        
+      
+        
+          
+        
+      
+
+      <a class="sidebar-nav-item" href="https://twitter.com/bhlmn">Twitter</a>
+      <a class="sidebar-nav-item" href="https://github.com/bhlmn">GitHub</a>
+  </nav>
+
 </div>
 
 
-    <div class="content container">
-      <div class="posts">
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">b|hlmn</a>
+            <small></small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="posts">
   
   <div class="post">
     <h1 class="post-title">
@@ -115,7 +121,7 @@
       </a>
     </h1>
     
-<a href="/2016/08/22/r-cheat-sheet.html#disqus_thread"
+<a href="//2016/08/22/r-cheat-sheet.html#disqus_thread"
     class = "commentcount"></a>
     
     <span class="post-date">22 Aug 2016</span>
@@ -404,59 +410,12 @@
 
   </div>
   
-  <div class="post">
-    <h1 class="post-title">
-      <a href="//2016/08/22/sample-post.html">
-        Sample Post
-      </a>
-    </h1>
-    
-<a href="/2016/08/22/sample-post.html#disqus_thread"
-    class = "commentcount"></a>
-    
-    <span class="post-date">22 Aug 2016</span>
-
-    <p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com">http://rmarkdown.rstudio.com</a>.</p>
-
-<p>When you click the <strong>Knit</strong> button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</p>
-
-<p>Haha</p>
-
-<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">summary</span><span class="p">(</span><span class="n">cars</span><span class="p">)</span></code></pre></figure>
-
-<figure class="highlight"><pre><code class="language-text" data-lang="text">##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00</code></pre></figure>
-
-<p>The border around the graph above is due to custom CSS for this site (see <code class="highlighter-rouge">public/css/custom.css</code>).  The caption was produced with some HTML:</p>
-
-<blockquote>
-  <p><code class="highlighter-rouge">&lt;p class = "figcaption"&gt;Here is a plot for you.&lt;/p&gt;</code></p>
-</blockquote>
-
-<p>You can write mathematics, of course, but the syntax will be a bit different from R Mardown.  Here’s some inline math:  <script type="math/tex">\pi/2 \approx 1.57</script>.  There is displayed math as well:</p>
-
-<script type="math/tex; mode=display">\sum_{i=1}^{n} i = \frac{n(n+1)}{2}.</script>
-
-<p>Here’s the source so you can see how the above worked:</p>
-
-<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">You</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">write</span><span class="w"> </span><span class="n">mathematics</span><span class="p">,</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">course</span><span class="p">,</span><span class="w"> </span><span class="n">but</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">syntax</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">bit</span><span class="w"> </span><span class="n">different</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="n">Markdown.</span><span class="w">  </span><span class="n">Here</span><span class="s1">'s some inline math:  $$ \pi/2 \approx 1.57 $$.  There is displayed math as well:
-
-$$ \sum_{i=1}^{n} i = \frac{n(n+1)}{2}.$$
-
-Here'</span><span class="n">s</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="n">...</span></code></pre></figure>
-
-<p>Happy blogging.</p>
-
-  </div>
-  
 </div>
 
+      </div>
     </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
 
   </body>
 </html>

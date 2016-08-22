@@ -10,8 +10,6 @@ output:
   html_document:
     mathjax:  default
     fig_caption:  true
-    toc: true
-    toc_depth: 3
 ---
 
 
