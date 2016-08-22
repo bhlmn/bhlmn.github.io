@@ -123,8 +123,14 @@ $(document).ready(function () {
 </ul></li>
 <li><a href="#working-with-data-frames"><span class="toc-section-number">3</span> Working with Data Frames</a><ul>
 <li><a href="#aggregate"><span class="toc-section-number">3.1</span> Aggregate</a></li>
+<li><a href="#cbind-rbind-and-merge"><span class="toc-section-number">3.2</span> cbind, rbind, and merge</a></li>
+<li><a href="#subsettingselecting-observations-and-rows"><span class="toc-section-number">3.3</span> Subsetting/Selecting observations and rows</a></li>
+<li><a href="#removing-dataframes"><span class="toc-section-number">3.4</span> Removing dataframes</a></li>
 </ul></li>
-<li><a href="#rmarkdown"><span class="toc-section-number">4</span> RMarkdown</a></li>
+<li><a href="#graphing"><span class="toc-section-number">4</span> Graphing</a><ul>
+<li><a href="#save-a-plot-to-disk"><span class="toc-section-number">4.1</span> Save a plot to disk</a></li>
+</ul></li>
+<li><a href="#rmarkdown"><span class="toc-section-number">5</span> RMarkdown</a></li>
 </ul>
 </div>
 
@@ -294,9 +300,71 @@ df.agg</code></pre>
 <p>The only model in <em>df</em> that had two entries was the Subaru Forester, so that is the only one that did any averaging.</p>
 <p><strong>Note</strong>: the paramater <em>FUN</em> is extremely powerful! Not only can you specify <em>mean</em> or <em>sum</em>, but you can write you own user-specific function to be applied! See <a href="https://www.r-bloggers.com/aggregate-a-powerful-tool-for-data-frame-in-r/">here</a> for some pretty advanced examples.</p>
 </div>
+<div id="cbind-rbind-and-merge" class="section level2">
+<h2><span class="header-section-number">3.2</span> cbind, rbind, and merge</h2>
+<p><em>cbind()</em> and <em>rbind()</em> are functions that add more columns (variables) and rows (observations) to a dataframe. Going back to the car example, say that you have another variable with miles per gallong (mpg). It can be combined with the previous dataframe with <em>cbind()</em>:</p>
+<pre class="r"><code>car.makes = c('Subaru', 'Subaru', 'Ford', 'Toyota', 'Ford', 'Subaru')
+car.models = c('Forester', 'Impreza', 'Focus', 'Camry', 'F150', 'Forester')
+car.mpg = c(26, 22, 31, 35, 16, 25)
+df.2 = data.frame(Make = car.makes, Model = car.models, MPG = car.mpg)
+df.3 = cbind(df, df.2)
+df.3</code></pre>
+<pre><code>##     Make    Model Price   Make    Model MPG
+## 1 Subaru Forester 24500 Subaru Forester  26
+## 2 Subaru  Impreza 34900 Subaru  Impreza  22
+## 3   Ford    Focus 18000   Ford    Focus  31
+## 4 Toyota    Camry 21750 Toyota    Camry  35
+## 5   Ford     F150 27300   Ford     F150  16
+## 6 Subaru Forester 23000 Subaru Forester  25</code></pre>
+<p>Notice how the variable <em>MPG</em> has been added, but now <em>Make</em> and <em>Model</em> are in the dataframe <em>df.3</em> twice. This could be fixed by:</p>
+<pre class="r"><code>df.3 = merge(df, df.2, by=c('Make', 'Model'))
+df.3</code></pre>
+<pre><code>##     Make    Model Price MPG
+## 1   Ford     F150 27300  16
+## 2   Ford    Focus 18000  31
+## 3 Subaru Forester 24500  26
+## 4 Subaru Forester 24500  25
+## 5 Subaru Forester 23000  26
+## 6 Subaru Forester 23000  25
+## 7 Subaru  Impreza 34900  22
+## 8 Toyota    Camry 21750  35</code></pre>
+<p>Now notice how we have duplicate entries for Subaru Forester. That is because both dataframes have two entries, so each Subaru Forester entry for <em>MPG</em> in the <em>df.2</em> gets applied to <em>df</em>. One way to get around this is to make sure the two dataframes you are merging have observations in the <strong>exact</strong> same order, and apply a simpler form of <em>cbind()</em>:</p>
+<pre class="r"><code>car.mpg = c(26, 22, 31, 35, 16, 25)
+df.2 = data.frame(MPG = car.mpg)
+df.3 = cbind(df, df.2)
+df.3</code></pre>
+<pre><code>##     Make    Model Price MPG
+## 1 Subaru Forester 24500  26
+## 2 Subaru  Impreza 34900  22
+## 3   Ford    Focus 18000  31
+## 4 Toyota    Camry 21750  35
+## 5   Ford     F150 27300  16
+## 6 Subaru Forester 23000  25</code></pre>
+</div>
+<div id="subsettingselecting-observations-and-rows" class="section level2">
+<h2><span class="header-section-number">3.3</span> Subsetting/Selecting observations and rows</h2>
+</div>
+<div id="removing-dataframes" class="section level2">
+<h2><span class="header-section-number">3.4</span> Removing dataframes</h2>
+<p>The <em>rm()</em> function removes an object from the working environment, freeing up memory. Below, if I uncommented <em>df.2</em> we would get an error because R would not be able to find <em>df.2</em> to print it.</p>
+<pre class="r"><code>rm(df.2)
+# df.2 </code></pre>
+</div>
+</div>
+<div id="graphing" class="section level1">
+<h1><span class="header-section-number">4</span> Graphing</h1>
+<div id="save-a-plot-to-disk" class="section level2">
+<h2><span class="header-section-number">4.1</span> Save a plot to disk</h2>
+<p>The following saves the file <a href="price_vs_mpg.png"><em>price_vs_mpg.png</em></a> to the current working directory. In place of <em>png()</em>, the functions <em>pdf()</em>, <em>jpeg()</em>, <em>tiff()</em>, etc. can be used.</p>
+<pre class="r"><code>png('price_vs_mpg.png')
+plot(df.3$Price, df.3$MPG)
+dev.off()</code></pre>
+<pre><code>## quartz_off_screen 
+##                 2</code></pre>
+</div>
 </div>
 <div id="rmarkdown" class="section level1">
-<h1><span class="header-section-number">4</span> RMarkdown</h1>
+<h1><span class="header-section-number">5</span> RMarkdown</h1>
 <p>RStudio has produced an excellent <a href="https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf">cheat sheet</a> which I reference often. No need to duplicate the awesome work they already did.</p>
 </div>
 

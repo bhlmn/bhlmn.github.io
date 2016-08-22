@@ -149,6 +149,52 @@ The only model in *df* that had two entries was the Subaru Forester, so that is 
 
 **Note**: the paramater *FUN* is extremely powerful! Not only can you specify *mean* or *sum*, but you can write you own user-specific function to be applied! See [here](https://www.r-bloggers.com/aggregate-a-powerful-tool-for-data-frame-in-r/) for some pretty advanced examples.
 
+## cbind, rbind, and merge
+
+*cbind()* and *rbind()* are functions that add more columns (variables) and rows (observations) to a dataframe. Going back to the car example, say that you have another variable with miles per gallong (mpg). It can be combined with the previous dataframe with *cbind()*:
+
+```{r cbind}
+car.makes = c('Subaru', 'Subaru', 'Ford', 'Toyota', 'Ford', 'Subaru')
+car.models = c('Forester', 'Impreza', 'Focus', 'Camry', 'F150', 'Forester')
+car.mpg = c(26, 22, 31, 35, 16, 25)
+df.2 = data.frame(Make = car.makes, Model = car.models, MPG = car.mpg)
+df.3 = cbind(df, df.2)
+df.3
+```
+Notice how the variable *MPG* has been added, but now *Make* and *Model* are in the dataframe *df.3* twice. This could be fixed by:
+```{r merge}
+df.3 = merge(df, df.2, by=c('Make', 'Model'))
+df.3
+```
+Now notice how we have duplicate entries for Subaru Forester. That is because both dataframes have two entries, so each Subaru Forester entry for *MPG* in the *df.2* gets applied to *df*. One way to get around this is to make sure the two dataframes you are merging have observations in the **exact** same order, and apply a simpler form of *cbind()*:
+```{r cbind2}
+car.mpg = c(26, 22, 31, 35, 16, 25)
+df.2 = data.frame(MPG = car.mpg)
+df.3 = cbind(df, df.2)
+df.3
+```
+
+## Subsetting/Selecting observations and rows
+
+## Removing dataframes
+
+The *rm()* function removes an object from the working environment, freeing up memory. Below, if I uncommented *df.2* we would get an error because R would not be able to find *df.2* to print it.
+```{r rm}
+rm(df.2)
+# df.2 
+```
+
+# Graphing
+
+## Save a plot to disk
+
+The following saves the file [*price_vs_mpg.png*](price_vs_mpg.png) to the current working directory. In place of *png()*, the functions *pdf()*, *jpeg()*, *tiff()*, etc. can be used.
+```{r saveplot}
+png('price_vs_mpg.png')
+plot(df.3$Price, df.3$MPG)
+dev.off()
+```
+
 # RMarkdown
 
 RStudio has produced an excellent [cheat sheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf) which I reference often. No need to duplicate the awesome work they already did.
