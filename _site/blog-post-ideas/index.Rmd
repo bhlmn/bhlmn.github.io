@@ -1,0 +1,19 @@
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+
+This page holds a list of ideas that I have for future posts.
+
+# Package examples
+
+* Manipulating/viewing data found in NetCDF files
+    + [RNetCDF](https://cran.r-project.org/web/packages/RNetCDF/RNetCDF.pdf)
+    + [ncdf4](https://cran.r-project.org/web/packages/ncdf4/ncdf4.pdf)
+
+# Project ideas
+
+* Using twitter to find out where it is currently raining.
+* Using RStudio, jekyll, and GitHub Pages to create a blog.
+* Using SQL calls in R.
