@@ -1,0 +1,43 @@
+# Dependencies
+markdown:         kramdown
+kramdown:
+  syntax-highlighter:  rouge
+
+# Permalinks
+permalink: /:year/:month/:day/:title.html
+# relative_permalinks: true
+
+# Setup
+title:            
+tagline:          ''
+description:      "I'm Bryan. I blog about R and data science."
+baseurl: "" # If you are making a gh-pages project blog, this is
+                        # the name of your project repo, preceded by a /'
+                        # Set it to just "/" if you are making a user page.
+
+baseurlknitr:  "//" # This will always be your baseurl plus and extra '/'
+                                # at the end.  It's used only when knitr renders
+                                # your R Markdown files.
+
+url: "https://bhlmn.github.io" # the base hostname & protocol for your site
+
+# set limit on number of post to appear on Home page
+homepostlimit: 4
+
+# Disqus comments:
+disqus:           true
+shortname:        bhlmn
+
+# encoding
+encoding:         utf-8
+
+# Social Media
+twitter:          true # add a twitter button to each post
+facebook:         true # add a facebook share button to each post
+
+author:
+  name:           'Bryan'
+  url:            https://bhlmn.github.io
+
+github:
+  repo:           https://github.com/bhlmn
