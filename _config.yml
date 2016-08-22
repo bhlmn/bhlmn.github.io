@@ -26,7 +26,7 @@ homepostlimit: 4
 
 # Disqus comments:
 disqus:           true
-shortname:        bhlmn
+shortname:        https-bhlmn-github-io
 
 # encoding
 encoding:         utf-8
