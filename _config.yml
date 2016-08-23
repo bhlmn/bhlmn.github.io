@@ -25,7 +25,7 @@ url: "https://bhlmn.github.io" # the base hostname & protocol for your site
 homepostlimit: 4
 
 # Disqus comments:
-disqus:           false
+disqus:           true
 shortname:        https-bhlmn-github-io
 
 # Social Media
