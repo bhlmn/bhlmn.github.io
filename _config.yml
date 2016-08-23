@@ -6,7 +6,7 @@ permalink: /:year/:month/:day/:title.html
 # relative_permalinks: true
 
 # Setup
-title:            b|hlmn
+title:            bhlmn
 tagline:          ''
 description:      'My name is Bryan. I blog about R and data science.'
 baseurl: "" # If you are making a gh-pages project blog, this is
@@ -25,7 +25,7 @@ url: "https://bhlmn.github.io" # the base hostname & protocol for your site
 homepostlimit: 4
 
 # Disqus comments:
-disqus:           true
+disqus:           false
 shortname:        https-bhlmn-github-io
 
 # Social Media
