@@ -3,9 +3,25 @@ layout: page
 title: About
 ---
 
-My name is Bryan. I'm a P.h. D. candidate at the Florida Institute of Technology. I look at clouds, play with my kids, and blog about R and data science.
+My name is Bryan. I'm a P.h. D. candidate at the Florida Institute of Technology in Environmental Science. I'm a weather nerd, I enjoy spending time with my wife and kids, and I blog about R and data science.
 
-I believe that teaching is the best way to learn, so I created this site to teach myself new R concepts and help others learn R. Feel free to get in touch with me on the following platforms ...
+I believe that teaching is the best way to learn, so I created this site to teach myself new R concepts and help others learn R.
+
+## Resources
+
+I work with R in [RStudio](https://www.rstudio.com/).
+
+I stay up to date on R topics at [R-bloggers](https://www.r-bloggers.com/) and [Quick-R](http://www.statmethods.net/).
+
+I've found the following books to be quite helpful:
+
+* [R in Action](https://www.amazon.com/Action-Data-Analysis-Graphics/dp/1617291382/ref=dp_ob_title_bk)
+* [Machine Learning with R](https://www.amazon.com/Machine-Learning-Second-Brett-Lantz/dp/1784393908/ref=sr_1_1?s=books&ie=UTF8&qid=1471950378&sr=1-1&keywords=machine+learning+with+r)
+* [R for Data Science](http://r4ds.had.co.nz/)
+
+## Contact
+
+Feel free to get in touch with me on the following platforms ...
 
 <i class="icon-twitter"></i> [@bhlmn](https://twitter.com/bhlmn)  
 <i class="icon-octopus"></i> [github.com/bhlmn](https://github.com/bhlmn)  
