@@ -5,7 +5,7 @@ title: About
 
 My name is Bryan. I'm a P.h. D. candidate at the Florida Institute of Technology in Environmental Science. I'm a weather nerd, I enjoy spending time with my wife and kids, and I blog about R and data science.
 
-I believe that teaching is the best way to learn, so I created this site to teach myself new R concepts and help others learn R.
+I believe that teaching is the best way to learn, so I created this site to teach myself new R concepts and help others learn R. 
 
 ## Resources
 
