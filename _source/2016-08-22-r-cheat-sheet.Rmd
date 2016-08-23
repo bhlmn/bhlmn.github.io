@@ -1,7 +1,7 @@
 ---
 layout:  page
 title: "R Cheat Sheet"
-comments:  false
+comments:  true
 published:  true
 author: "Bryan Holman"
 date: 2016-08-22 11:18:00
