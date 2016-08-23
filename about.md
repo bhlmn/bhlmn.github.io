@@ -22,6 +22,7 @@ I've found the following books to be quite helpful:
 * [R in Action](https://www.amazon.com/Action-Data-Analysis-Graphics/dp/1617291382/ref=dp_ob_title_bk)
 * [Machine Learning with R](https://www.amazon.com/Machine-Learning-Second-Brett-Lantz/dp/1784393908/ref=sr_1_1?s=books&ie=UTF8&qid=1471950378&sr=1-1&keywords=machine+learning+with+r)
 * [R for Data Science](http://r4ds.had.co.nz/)
+* [R Graphics Cookbook](https://www.amazon.com/gp/product/1449316956/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1449316956&linkCode=as2&tag=cooforr09-20)
 
 ## Contact
 
