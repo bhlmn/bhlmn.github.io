@@ -9,5 +9,5 @@ I believe that teaching is the best way to learn, so I created this site to teac
 
 <i class="icon-twitter"></i> [@bhlmn](https://twitter.com/bhlmn)  
 <i class="icon-octopus"></i> [github.com/bhlmn](https://github.com/bhlmn)  
-<i class="icon-linked_in"></i> [linkedin.com/in/bhlmn](https://www.linkedin.com/in/bhlmn)
+<i class="icon-linked_in"></i> [linkedin.com/in/bhlmn](https://www.linkedin.com/in/bhlmn)  
 <i class="icon-at"></i> <a href="mailto: bhlmn@gmail.com">bhlmn [at] gmail [dot] com</a>
