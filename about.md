@@ -24,7 +24,7 @@ I've found the following books to be quite helpful:
 * [R for Data Science](http://r4ds.had.co.nz/)
 * [R Graphics Cookbook](https://www.amazon.com/gp/product/1449316956/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1449316956&linkCode=as2&tag=cooforr09-20)
 
-## Contact
+## <a name="contact"></a>Contact
 
 Feel free to get in touch with me on the following platforms ...
 
