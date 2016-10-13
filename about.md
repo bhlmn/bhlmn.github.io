@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-My name is Bryan. I'm a P.h. D. candidate of Environmental Science at the Florida Institute of Technology. I'm a weather nerd, I enjoy spending time with my wife and kids, and I blog about R and data science.
+My name is Bryan. I'm a P.h. D. candidate of Environmental Science at the Florida Institute of Technology. I'm a weather nerd, I enjoy spending time with my wife and kids, and I spend time coding in R and learning about data science.
 
 I believe that teaching is the best way to learn, so I created this site to teach myself new R concepts and help others learn R.
 
