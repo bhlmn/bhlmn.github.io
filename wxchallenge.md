@@ -18,10 +18,12 @@ BMA is a technique that removes biases in ensemble members and also calibrates e
 > Updated 2016-10-13 17:12 GMT
 
 ### Maximum Temperature
-<img src="tmax.png" width="500"/>
+<img src="tmax.png" width="700"/>
 
-![Minimum Temperature (F)](tmin.png)
+### Minimum Temperature
+<img src="tmin.png" width="700"/>
 
-![Maximum Wind Speed (Knts)](wspd.png)
+### Maximum Wind Speed
+<img src="wspd.png" width="700"/>
 
 If you have questions about these products please [contact me](https://bhlmn.github.io/about.html#contact)!
