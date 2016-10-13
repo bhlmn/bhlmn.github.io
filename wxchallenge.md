@@ -15,15 +15,23 @@ Bayesian Model Averaging (BMA) is an ensemble calibration and bias correction te
 
 BMA is a technique that removes biases in ensemble members and also calibrates ensembles to provide a calibrated [probability density function (PDF)](https://en.wikipedia.org/wiki/Probability_density_function) for a given forecast variable. Below is a calibrated PDF for maximum and minimum temperature and maximum wind speed for Harrisburg, PA. Calibrated precipitation is still in production. Ensemble information comes from the 06Z run of the 0.5 degree GEFS.
 
-> Updated 2016-10-13 17:12 GMT
+For each of the plots below, the bell-shaped curve is the PDF. The vertical blue line represents the most likely value for the forecasted variable of interest. The vertical black lines represent lower (10%) and upper (90%) forecast limits. Thus, if BMA is working properly, given the current ensemble output the verifying observation will fall in between those lines 80% of the time.
 
-### Maximum Temperature
-<img src="tmax.png" width="700"/>
+The dots at the top of each plot represent the raw ensemble output. The black dot is the GEFS control forecast, and the grey dots represent the 20 perturbation members. If the dots are close together (sharp), this implies a higher certainty forecast. In contrast, if they are far apart, this implies greater uncertainty in the forecast. But beware! Ensembles are typically under-dispersive, so don't mistake a sharp forecast as a confident one!
 
-### Minimum Temperature
-<img src="tmin.png" width="700"/>
+If the dots are close to the blue line, this means that there isn't much bias in the ensemble output. If the dots are far away, this means there is a lot of bias in the ensemble members, and the BMA procedure identified and corrected a significant amount of systematic error.
 
-### Maximum Wind Speed
-<img src="wspd.png" width="700"/>
+> Updated 2016-10-13 17:27 GMT
+
+### BMA PDFs for KMDT for Friday, October 14
+
+#### Maximum Temperature
+[<img src="tmax.png" width="700"/>](tmax.png)
+
+#### Minimum Temperature
+[<img src="tmin.png" width="700"/>](tmin.png)
+
+#### Maximum Wind Speed
+[<img src="wspd.png" width="700"/>](wspd.png)
 
 If you have questions about these products please [contact me](https://bhlmn.github.io/about.html#contact)!
