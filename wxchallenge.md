@@ -27,13 +27,13 @@ If the dots are close to the blue line, this means that there isn't much bias in
 
 Click on each image to enlarge it.
 
-#### Maximum Temperature
+<p align="center">**Maximum Temperature**</p>
 [<img src="tmax.png" width="700"/>](tmax.png)
 
-#### Minimum Temperature
+<p align="center">**Minimum Temperature**</p>
 [<img src="tmin.png" width="700"/>](tmin.png)
 
-#### Maximum Wind Speed
+<p align="center">**Maximum Wind Speed**</p>
 [<img src="wspd.png" width="700"/>](wspd.png)
 
 If you have questions about these products please [contact me](https://bhlmn.github.io/about.html#contact)!
