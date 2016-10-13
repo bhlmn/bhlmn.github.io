@@ -36,4 +36,6 @@ The dots at the top of each plot represent the raw ensemble output. The black do
 
 If the dots are close to the blue line, this means that there isn't much bias in the ensemble output. If the dots are far away, this means there is a lot of bias in the ensemble members, and the BMA procedure identified and removed a significant amount of systematic error.
 
+I created the above plots in [R](https://www.r-project.org/) using [RStudio](https://www.rstudio.com/) and performed BMA with the [ensembleBMA](https://cran.r-project.org/web/packages/ensembleBMA/index.html) package developed for R.
+
 If you have questions about these products please [contact me](https://bhlmn.github.io/about.html#contact)!
