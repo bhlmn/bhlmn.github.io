@@ -8,6 +8,7 @@ This page provides some tools I use to help me in the [WxChallenge](http://www.w
 * [NWS Forecast](http://forecast.weather.gov/MapClick.php?lat=40.1934&lon=-76.7633#.V_-4vpMrJE4)
 * [3-Day Obs](http://w1.weather.gov/data/obhistory/KMDT.html)
 * [SREF Plume Viewer](http://www.spc.noaa.gov/exper/sref/srefplumes/)
+* [WxChallenge WxData](http://www.wxchallenge.com/tools/weatherdata.php)
 
 ## Calibrated PDFs for KMDT for Friday, October 14
 
