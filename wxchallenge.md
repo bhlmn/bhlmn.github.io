@@ -11,7 +11,7 @@ This page provides some tools I use to help me in the [WxChallenge](http://www.w
 
 ## Calibrated PDFs for KMDT for Friday, October 14
 
-For information on Bayesian Model Averaging (BMA), scroll to the bottom of this page. Click on each image to enlarge it.
+For information on Bayesian Model Averaging (BMA), scroll to the [bottom of this page](#bma). Click on each image to enlarge it.
 
 > Plots updated 2016-10-13 17:27 GMT
 
@@ -24,7 +24,7 @@ For information on Bayesian Model Averaging (BMA), scroll to the bottom of this 
 <p align="center"><strong>Maximum Wind Speed</strong></p>
 [<img src="wspd.png" width="700"/>](wspd.png)
 
-## Bayesian Model Averaging
+## <a name="bma"></a>Bayesian Model Averaging
 
 Bayesian Model Averaging (BMA) is an ensemble calibration and bias correction technique. For more info, check out [Raftery et al. (2005)](http://journals.ametsoc.org/doi/full/10.1175/MWR2906.1) and [Sloughter et al. (2010)](http://www.tandfonline.com/doi/abs/10.1198/jasa.2009.ap08615). In a nutshell, current ensembles such as the [Global Ensemble Forecast System (GEFS)](https://www.ncdc.noaa.gov/data-access/model-data/model-datasets/global-ensemble-forecast-system-gefs) are biased and uncalibrated. Error in forecasts can be separated into two parts: systematic (predictable and removable) and random. In addition, ensembles are typically under-dispersive, meaning that observations frequently fall outside the range of ensemble solutions.
 
