@@ -28,7 +28,6 @@ I've found the following books to be quite helpful:
 
 Feel free to get in touch with me on the following platforms ...
 
-<i class="icon-twitter"></i> [@bhlmn](https://twitter.com/bhlmn)  
 <i class="icon-octopus"></i> [github.com/bhlmn](https://github.com/bhlmn)  
 <i class="icon-linked_in"></i> [linkedin.com/in/bhlmn](https://www.linkedin.com/in/bhlmn)  
-<i class="icon-at"></i> <a href="mailto: bhlmn@gmail.com">bhlmn [at] gmail [dot] com</a>
+<i class="icon-at"></i> <a href="mailto: bholman2013@my.fit.edu">bholman2013 [at] my [dot] fit [dot] edu</a>
