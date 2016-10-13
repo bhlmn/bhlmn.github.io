@@ -15,10 +15,13 @@ Bayesian Model Averaging (BMA) is an ensemble calibration and bias correction te
 
 BMA is a technique that removes biases in ensemble members and also calibrates ensembles to provide a calibrated [probability density function (PDF)](https://en.wikipedia.org/wiki/Probability_density_function) for a given forecast variable. Below is a calibrated PDF for maximum and minimum temperature and maximum wind speed for Harrisburg, PA. Calibrated precipitation is still in production. Ensemble information comes from the 06Z run of the 0.5 degree GEFS.
 
-![Maximum Temperature (F)](tmax.png)
+> Updated 2016-10-13 17:12 GMT
+
+### Maximum Temperature
+<img src="tmax.png" width="500"/>
 
 ![Minimum Temperature (F)](tmin.png)
 
 ![Maximum Wind Speed (Knts)](wspd.png)
 
-If you have questions about these products please [contact me](https://bhlmn.github.io/about.html)!
+If you have questions about these products please [contact me](https://bhlmn.github.io/about.html#contact)!
