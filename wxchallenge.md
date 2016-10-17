@@ -10,11 +10,11 @@ This page provides some tools I use to help me in the [WxChallenge](http://www.w
 * [SREF Plume Viewer](http://www.spc.noaa.gov/exper/sref/srefplumes/)
 * [WxChallenge WxData](http://www.wxchallenge.com/tools/weatherdata.php)
 
-## Calibrated PDFs for KMDT for Friday, October 14
+## Calibrated PDFs for KMDT for Tuesday, October 18
 
 For information on Bayesian Model Averaging (BMA), scroll to the [bottom of this page](#bma). Click on each image to enlarge it.
 
-> Plots updated 2016-10-13 17:27 GMT
+> Plots updated 2016-10-17 18:33 GMT
 
 <p align="center"><strong>Maximum Temperature</strong></p>
 [<img src="tmax.png" width="700"/>](tmax.png)
