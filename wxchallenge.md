@@ -3,18 +3,18 @@ layout: page
 title: WxChallenge
 ---
 
-This page provides some tools I use to help me in the [WxChallenge](http://www.wxchallenge.com/). The current city is Harrisburg, PA (KMDT).
+This page provides some tools I use to help me in the [WxChallenge](http://www.wxchallenge.com/). The current city is Grand Island, NE (KGRI).
 
-* [NWS Forecast](http://forecast.weather.gov/MapClick.php?lat=40.1934&lon=-76.7633#.V_-4vpMrJE4)
-* [3-Day Obs](http://w1.weather.gov/data/obhistory/KMDT.html)
+* [NWS Forecast](http://forecast.weather.gov/MapClick.php?lat=40.95833&lon=-98.3125#.WA5O-nUrIkg)
+* [3-Day Obs](http://w1.weather.gov/data/obhistory/KGRI.html)
 * [SREF Plume Viewer](http://www.spc.noaa.gov/exper/sref/srefplumes/)
 * [WxChallenge WxData](http://www.wxchallenge.com/tools/weatherdata.php)
 
-## Calibrated PDFs for KMDT for Friday, October 21
+## Calibrated PDFs for KGRI for Tuesday, October 25
 
 For information on Bayesian Model Averaging (BMA), scroll to the [bottom of this page](#bma). Click on each image to enlarge it.
 
-> Plots updated 2016-10-20 18:22 GMT
+> Plots updated 2016-10-24 18:11 GMT
 
 <p align="center"><strong>Maximum Temperature</strong></p>
 [<img src="tmax.png" width="700"/>](tmax.png)
