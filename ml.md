@@ -17,6 +17,13 @@ Within each branch of machine learning method I include papers I've checked out 
   + 1-NN
   + [Weighted k-NN](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm#The_weighted_nearest_neighbour_classifier)
   + [Extended k-NN (ENN)](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm#Extension_of_k-NN_.28ENN.29_for_classification)
+  + Fuzzy k-NN
+
+* Uses
+  + Weather prediction by identifying past analogues using Fuzzy k-NN ([Riordan & Hansen 2002](http://collaboration.cmc.ec.gc.ca/science/rpn/publications/pdf/EIS_Riordan_Hansen_xx_xx_02_official.pdf))
+
+* Ideas
+  + Use fuzzy k-NN to forecast winter precipitation for Willamette Valley using past winters.
 
 ### Naive Bayes
 
@@ -53,3 +60,6 @@ Within each branch of machine learning method I include papers I've checked out 
 
 * Uses
   + Climate classification ([Zscheischler et al. 2012](http://www.sciencedirect.com/science/article/pii/S1877050912002177]))
+
+* Ideas
+  + Use k-mean and fuzzy c-means with the CFSR dataset for climate classification over the CONUS.
