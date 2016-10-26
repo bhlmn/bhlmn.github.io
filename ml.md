@@ -86,6 +86,7 @@ Within each branch of machine learning method I include papers I've checked out 
 ## Unsupervised methods
 
 ### [Association Rule Learning](https://en.wikipedia.org/wiki/Association_rule_learning)
+  + Using association rules to predict severe weather events ([Zhang et al. 2004](http://ieeexplore.ieee.org/document/1342698/?arnumber=1342698&tag=1))
 
 ### [k-means Clustering](https://en.wikipedia.org/wiki/K-means_clustering)
 
