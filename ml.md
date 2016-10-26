@@ -21,6 +21,7 @@ Within each branch of machine learning method I include papers I've checked out 
 
 * Uses
   + Weather prediction by identifying past analogues using Fuzzy k-NN ([Riordan & Hansen 2002](http://collaboration.cmc.ec.gc.ca/science/rpn/publications/pdf/EIS_Riordan_Hansen_xx_xx_02_official.pdf))
+  + Analog forecasting of ceiling and visibility using fuzzy k-NN ([Hansen 2000](http://www.leg.ufpr.br/~eder/Artigos/Wather/Hansen_2000b.pdf))
 
 * Ideas
   + Use fuzzy k-NN to forecast winter precipitation for Willamette Valley using past winters.
