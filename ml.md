@@ -85,7 +85,7 @@ Within each branch of machine learning method I include papers I've checked out 
 
 ## Unsupervised methods
 
-### Association Rules
+### [Association Rule Learning](https://en.wikipedia.org/wiki/Association_rule_learning)
 
 ### [k-means Clustering](https://en.wikipedia.org/wiki/K-means_clustering)
 
