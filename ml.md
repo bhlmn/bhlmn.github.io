@@ -24,7 +24,7 @@ Within each branch of machine learning method I include papers I've checked out 
 
 * Uses
   + Observation based probabilistic clear-sky forecasting with k-NN ([Hall et al. 2011](http://journals.ametsoc.org/doi/full/10.1175/2010JAMC2529.1))
-  + Ensemble-based snowfall accumulation prediction using k-NN ([McCandless 2009](https://etda.libraries.psu.edu/catalog/10678))
+  + Ensemble-based snowfall accumulation prediction using k-NN ([McCandless 2010](https://etda.libraries.psu.edu/catalog/10678))
   + Probabilistic, analog sky conditions forecasting ([Hall et al. 2010](http://journals.ametsoc.org/doi/abs/10.1175/2010WAF2222372.1))
   + Seasonal/climate prediction using k-NN ([Jan et al. 2008](http://link.springer.com/chapter/10.1007%2F978-3-540-89853-5_7))
   + Analog forecasting of ceiling and visibility using fuzzy k-NN ([Hansen 2007](http://journals.ametsoc.org/doi/abs/10.1175/2007WAF2006017.1))
