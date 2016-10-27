@@ -11,11 +11,11 @@ This page provides some tools I use to help me in the [WxChallenge](http://www.w
 * [SREF Plume Viewer](http://www.spc.noaa.gov/exper/sref/srefplumes/)
 * [WxChallenge WxData](http://www.wxchallenge.com/tools/weatherdata.php)
 
-## Calibrated PDFs for KGRI for Thursday, October 27
+## Calibrated PDFs for KGRI for Friday, October 28
 
 For information on Bayesian Model Averaging (BMA), scroll to the [bottom of this page](#bma). Click on each image to enlarge it.
 
-> Plots updated 2016-10-26 18:19 GMT
+> Plots updated 2016-10-27 15:46 GMT
 
 <p align="center"><strong>Maximum Temperature</strong></p>
 [<img src="tmax.png" width="700"/>](tmax.png)
