@@ -81,6 +81,7 @@ Within each branch of machine learning method I include papers I've checked out 
 
 * Uses
   + Using GEP to generate large ensembles ([Roebber 2015](http://web.b.ebscohost.com/ehost/pdfviewer/pdfviewer?vid=0&sid=1b35400c-faab-47a2-b8ef-7ed10443c026%40sessionmgr2))
+  + GEP for extreme value probabilistic precipitation forecasts([Roebber 2013](http://journals.ametsoc.org/doi/abs/10.1175/MWR-D-12-00285.1))
   + Improving WRF-ARW wind speed prediction with GEP ([Martinez-Arellano et al. 2012](http://link.springer.com/chapter/10.1007/978-1-4471-4739-8_27#page-1))
   + Deterministic ensemble forecasts using GEP ([Bakhshaii & Stull 2009](https://open.library.ubc.ca/cIRcle/collections/facultyresearchandpublications/52383/items/1.0041835))
 
