@@ -3,7 +3,7 @@ layout: page
 title: WxChallenge
 ---
 
-This page provides some tools I use to help me in the [WxChallenge](http://www.wxchallenge.com/). The current city is Grand Island, NE (KGRI).
+This page provides some tools I use to help me in the [WxChallenge](http://www.wxchallenge.com/). The current city is Reno, NV (KRNO).
 
 * [NWS Forecast](http://forecast.weather.gov/MapClick.php?lat=40.95833&lon=-98.3125#.WA5O-nUrIkg)
 * [3-Day Obs](http://w1.weather.gov/data/obhistory/KGRI.html)
@@ -11,11 +11,11 @@ This page provides some tools I use to help me in the [WxChallenge](http://www.w
 * [SREF Plume Viewer](http://www.spc.noaa.gov/exper/sref/srefplumes/)
 * [WxChallenge WxData](http://www.wxchallenge.com/tools/weatherdata.php)
 
-## Calibrated PDFs for KGRI for Friday, November 4
+## Calibrated PDFs for KRNO for Tuesday, November 8
 
 For information on Bayesian Model Averaging (BMA), scroll to the [bottom of this page](#bma). Click on each image to enlarge it.
 
-> Plots updated 2016-11-03 17:30 GMT
+> Plots updated 2016-11-07 15:31 GMT
 
 <p align="center"><strong>Maximum Temperature</strong></p>
 [<img src="tmax.png" width="700"/>](tmax.png)
