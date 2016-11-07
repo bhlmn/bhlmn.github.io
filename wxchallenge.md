@@ -5,9 +5,9 @@ title: WxChallenge
 
 This page provides some tools I use to help me in the [WxChallenge](http://www.wxchallenge.com/). The current city is Reno, NV (KRNO).
 
-* [NWS Forecast](http://forecast.weather.gov/MapClick.php?lat=40.95833&lon=-98.3125#.WA5O-nUrIkg)
-* [3-Day Obs](http://w1.weather.gov/data/obhistory/KGRI.html)
-* [GFS Ensemble MOS](http://www.nws.noaa.gov/cgi-bin/mos/getens.pl?sta=KGRI)
+* [NWS Forecast](http://forecast.weather.gov/MapClick.php?lat=39.4986&lon=-119.7681#.WCCtOnUrIkg)
+* [3-Day Obs](http://w1.weather.gov/data/obhistory/KRNO.html)
+* [GFS Ensemble MOS](http://www.nws.noaa.gov/cgi-bin/mos/getens.pl?sta=KRNO)
 * [SREF Plume Viewer](http://www.spc.noaa.gov/exper/sref/srefplumes/)
 * [WxChallenge WxData](http://www.wxchallenge.com/tools/weatherdata.php)
 
