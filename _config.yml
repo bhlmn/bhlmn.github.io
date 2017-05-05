@@ -38,3 +38,5 @@ author:
 
 github:
   repo:           https://github.com/bhlmn
+
+theme: jekyll-theme-minimal
