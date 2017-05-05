@@ -33,10 +33,9 @@ My dissertation research is almost entirely focused on statistical post processi
 ### Nonhomogeneous Gaussian Regression (NGR) a.k.a. Ensemble Model Output Statistics (EMOS) ([Gneiting et al. 2005](http://journals.ametsoc.org/doi/full/10.1175/MWR2904.1))
 
 * 2-m Temperature
+    + [Hagedorn et al. (2008)](http://journals.ametsoc.org/doi/10.1175/2007MWR2410.1) used reforecasts from both the ECMWF and GEFS to calibrate 2-m temperature and compared the output to 30-day running calibrated forecasts of the same ensembles. The raw and calibrated ECMWF are better than the raw and calibrated GEFS, and the ensembles calibrated with the reforecast datasets had superior CRPSS scores than the 30-day calibrated ensembles.
     + [Kann et al. (2009)](http://journals.ametsoc.org/doi/abs/10.1175/2009MWR2793.1) [[notes](notes/kannetal2009.pdf)] perform NGR on 2-m temperature forecasts provided by an 18 member, 18-km resolution ensemble over Austria. The ensemble was initialized with ECMWF analyses. They trained NGR using output from a 1-km x 1-km gridded analysis and verified the NGR PDFs with 170 Austrian stations during December 2007 and July 2008. The calibrated ensemble had little bias, reduced RMSE, and better spread and CRPS/CRPSS scores. They use the same technique on the full ECMWF-EPS with good results, but not as good as their limited area model ensemble. They also introduce a time-decaying averaging CRPS method for calculating the NGR coefficients (NGR-TD) and found it improved results over the baseline NGR.
-
-* To Read
-    + [Hagedorn et al. 2008 - Probabilistic Forecast Calibration Using ECMWF and GFS Ensemble Reforecasts. Part I: Two-Meter Temperatures](http://journals.ametsoc.org/doi/10.1175/2007MWR2410.1)
+    + [Hagedorn et al (2012)](http://onlinelibrary.wiley.com/doi/10.1002/qj.1895/full) [[notes](notes/hagedornetal2012.pdf)]found that NGR calibrated ECMWF 2-m temperature forecasts were better than a multimodel ensemble (9 full ensemble suites ... over 230 members). The calibrated forecasts were calibrated using an 18 year reanalysis. The reanalysis used greatly changed the capabilities of the calibrated output. Calibration didn't do much for 500 mb geopotential height.
 
 ### Adaptive Calibration
 
@@ -56,6 +55,8 @@ My dissertation research is almost entirely focused on statistical post processi
     + [Hamill et al. 2008 - Probabilistic Forecast Calibration Using ECMWF and GFS Ensemble Reforecasts. Part II: Precipitation](http://journals.ametsoc.org/doi/full/10.1175/2007MWR2411.1)
 
 ### Comparative Studies
+
+* [Wilks & Hamill 2007](http://journals.ametsoc.org/doi/full/10.1175/MWR3402.1) found that logistic regression and EMOS applied to a reforecast dataset performed better than ensemble dressing for daily and medium range temperature and precipitation forecasts compared to enesmble dressing.
 
 ## To Read
 
