@@ -1,3 +1,3 @@
 # bhlmn
 
-This is my personal website, found at [bhlmn.github.io](https://bhlmn.github.io). My website is run using [R Markdown](https://rmarkdown.rstudio.com) and Yihui Xie's <a href = "https://github.com/yihui/knitr-jekyll">knitr-jekyll</a>. I use the [Lanyon](http://lanyon.getpoole.com) theme by [@mdo](https://twitter.com/mdo). I originally set up the site using [these instructions](https:homerhanumat.github.io/knitr-lanyon).
+This is my personal website, found at [bhlmn.github.io](https://bhlmn.github.io).
