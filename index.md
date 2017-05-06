@@ -19,14 +19,14 @@ During my studies I've become passionate about data management, big data capabil
 
 [**WindVerification**](https://github.com/bhlmn/WindVerification) - R Package to process and verify wind forecasts from weather models.
 
-**IRLFetch** - [Wind fetch](https://en.wikipedia.org/wiki/Fetch_(geography))-based statistical bias correction and downscaling of wind speed forecasts over water bodies too small to be seen by weather models. Submitted to _Weather and Forecasting_.
+**IRLFetch** - Wind fetch-based statistical bias correction and downscaling of wind speed forecasts over water bodies too small to be seen by weather models. Submitted to _Weather and Forecasting_.
 
 ## Skills
 
-Every day I develop with R in [RStudio](https://www.rstudio.com/), but throughout my graduate studies and dissertation work I've become comfortable with the following:
+Everyday I develop with [R](https://www.r-project.org/) in [RStudio](https://www.rstudio.com/), but throughout my graduate studies and dissertation work I've become comfortable with the following:
 
-**Languages**: R, Python, Java, SQL, HTML, CSS, JavaScript, bash, csh, Matlab
+**Languages**: R, Python, Java, SQL, HTML, CSS, JavaScript, Matlab, bash, csh, Fortran
 
-**Software/Frameworks**: Tableau, Geographic Information Systems, Unix/Linux, Command Line, Spark, Git, Microsoft Office, LaTeX
+**Software/Frameworks**: Tableau, Geographic Information Systems, Unix/Linux, Command Line, Spark, Git, Microsoft Office, LaTeX, Numerical Modeling
 
 **Statistical Techniques**: Classification (k-NN, Naive Bayes, Random Forests), Prediction (Multivariate/Logistic Regression, Neural Networks, SVMs, Gene Expression Programming), Clustering (k-means, fuzzy c-means)
