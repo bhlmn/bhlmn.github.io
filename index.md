@@ -5,11 +5,11 @@ title: Bryan Holman
 
 ## Hi! I'm Bryan!
 
-I'm a weather/stats geek who loves to learn and code.
+I'm a [weather](https://bhlmn.github.io/wx.html)/stats geek who loves to learn and code.
 
 Currently I am a Ph. D. candidate in [Dr. Steven Lazarus](http://www.fit.edu/faculty/profiles/profile.php?value=65)' meteorology [research group](http://coe.fit.edu/dmes/meteorology/research.php) at the [Florida Institute of Technology](http://www.fit.edu/). I study and implement statistical methods that improve the accuracy of wind forecasts.
 
-During my studies I've become passionate about data management, big data capabilities, and solving problems with machine learning. After graduation I plan on pursuing a career in data science in my native Pacific Northwest.
+During my studies I've become passionate about data management, big data capabilities, and solving problems with [machine learning](https://bhlmn.github.io/ml.html). After graduation I plan on pursuing a career in data science in my native Pacific Northwest.
 
 ---
 ## Projects

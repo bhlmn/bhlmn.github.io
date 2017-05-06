@@ -1,9 +1,9 @@
 ---
-layout: page
+layout: default
 title: Weather Links
 ---
 
-This site contains some links to weather data I find useful. If any of the links are broken, please [let me know](about.html#contact)!
+This site contains some links to weather data I find useful. If any of the links are broken, please let me know!
 
 ## Imagery
 
@@ -38,7 +38,3 @@ This site contains some links to weather data I find useful. If any of the links
 ## Archived data
 
 * [NEXRAD Archive](http://www.ncdc.noaa.gov/nexradinv/map.jsp){:target="_blank"}
-
-## IDV Bundles
-
-* [tropics.xidv](https://bhlmn.github.io/public/idv/tropics.xidv){:target="_blank"}
