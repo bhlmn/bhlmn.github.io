@@ -7,7 +7,7 @@ title: Bryan Holman
 
 I'm a weather/stats geek who loves to learn and code.
 
-Currently I am a Ph. D. candidate in [Dr. Steven Lazarus](http://www.fit.edu/faculty/profiles/profile.php?value=65)' coastal winds research group at the [Florida Institute of Technology](http://www.fit.edu/). I study and implement statistical methods aimed at improving wind forecasts.
+Currently I am a Ph. D. candidate in [Dr. Steven Lazarus](http://www.fit.edu/faculty/profiles/profile.php?value=65)' meteorology [research group](http://coe.fit.edu/dmes/meteorology/research.php) at the [Florida Institute of Technology](http://www.fit.edu/). I study and implement statistical methods that improve the accuracy of wind forecasts.
 
 During my studies I've become passionate about data management, big data capabilities, and solving problems with machine learning. After graduation I plant on pursuing a career in data science in my native Pacific Northwest.
 
@@ -23,8 +23,10 @@ During my studies I've become passionate about data management, big data capabil
 
 ## Skills
 
-I use R every day, but throughout my graduate studies and dissertation work I've become comfortable with the following:
+Every day I develop with R in [RStudio](https://www.rstudio.com/), but throughout my graduate studies and dissertation work I've become comfortable with the following:
 
-**Languages**: R, Python, Java, SQL, HTML, CSS, JavaScript, bash, csh, Matlab  
-**Software**: Tableau, LaTeX, Geographic Information Systems, Git, Microsoft Office, Unix/Linux, Mac OS  
-**Statistical Techniques**: Classification (k-NN, Naive Bayes, Random Forests), Prediction (Multivariate/Logistic Regression, Neural Networks, SVMs, Gene Expression), Clustering (k-means, fuzzy c-means)  
+**Languages**: R, Python, Java, SQL, HTML, CSS, JavaScript, bash, csh, Matlab
+
+**Software/Frameworks**: Tableau, Geographic Information Systems, Unix/Linux, Command Line, Spark, Git, Microsoft Office, LaTeX
+
+**Statistical Techniques**: Classification (k-NN, Naive Bayes, Random Forests), Prediction (Multivariate/Logistic Regression, Neural Networks, SVMs, Gene Expression Programming), Clustering (k-means, fuzzy c-means)
