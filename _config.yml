@@ -1,13 +1,3 @@
-# Setup
-title:            Bryan Holman
-tagline:          ''
-description:      "I'm a Ph. D. candidate at the Florida Institute of Technology. I watch clouds, play with my kids, code in R and python, and study machine learning and data science."
-
-author:
-  name:           'Bryan Holman'
-  url:            https://bhlmn.github.io
-
-github:
-  repo:           https://github.com/bhlmn
-
+title: Bryan Holman
+description: "I'm a Ph. D. candidate at the Florida Institute of Technology. I watch clouds, play with my kids, code in R and python, and study machine learning and data science."
 theme: jekyll-theme-minimal
