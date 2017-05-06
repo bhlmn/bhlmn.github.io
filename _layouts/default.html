@@ -15,7 +15,7 @@
   <body>
     <div class="wrapper">
       <header>
-        <img src="https://bhlmn.github.io/img/bph.png" alt="Bryan Holman" style="display: block; margin: auto; width: 50%; padding-bottom: 7px;">
+        <img src="https://bhlmn.github.io/img/bph.png" alt="Bryan Holman" style="display: block; margin: auto; width: 50%; padding-bottom: 11px;">
 
         <h1 style="text-align: center;">{{ site.title | default: site.github.repository_name }}</h1>
         <p>{{ site.description | default: site.github.project_tagline }}</p>
@@ -25,10 +25,11 @@
         {% endif %}
 
         {% if site.github.is_user_page %}
-          <p class="view"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Melbourne, FL</p>
-          <p class="view"><i class="fa fa-github" aria-hidden="true"></i><a href="{{ site.github.owner_url }}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;github.com/bhlmn</a></p>
-          <p class="view"><i class="fa fa-linkedin" aria-hidden="true"></i><a href="https://www.linkedin.com/in/bhlmn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;linkedin.com/in/bhlmn</a></p>
-          <p class="view"><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:bholman2013@my.fit.edu">&nbsp;&nbsp;&nbsp;&nbsp;bholman2013@my.fit.edu</a></p>
+          <p class="view"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;melbourne, fl</p>
+          <p class="view"><i class="fa fa-github" aria-hidden="true"></i><a href="{{ site.github.owner_url }}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bhlmn</a></p>
+          <p class="view"><i class="fa fa-linkedin" aria-hidden="true"></i><a href="https://www.linkedin.com/in/bhlmn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bhlmn</a></p>
+          <p class="view"><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:bholman2013@my.fit.edu">&nbsp;&nbsp;&nbsp;&nbsp;contact</a></p>
+          <p class="view"><i class="fa fa-file" aria-hidden="true"></i><a href="https://bhlmn.github.io/resume.html">&nbsp;&nbsp;&nbsp;&nbsp;$nbsp;r&eacute;sum&eacute;</a></p>
         {% endif %}
 
         {% if site.show_downloads %}
@@ -48,6 +49,7 @@
         {% if site.github.is_project_page %}
         <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
         {% endif %}
+        <p>&copy; 2017 Bryan Holman</p>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
