@@ -14,11 +14,11 @@ During my studies I've become passionate about data management, big data capabil
 ---
 ## Projects
 
-[**IRLSetup**](https://bhlmn.github.io/IRLSetup/) uses a polynomial regression model developed by my colleague [Jeff Colvin](https://www.linkedin.com/in/jeff-colvin-6a1bb191/) to forecast north/south wind setup in the Indian River Lagoon. I developed the code to automate the extraction, transformation, and loading of numerical and observational weather data into the regression model, and built the website to display the real-time wind setup forecasts.
+[**IRLSetup**](https://bhlmn.github.io/IRLSetup/) uses a polynomial regression model developed by my colleague [Jeff Colvin](https://www.linkedin.com/in/jeff-colvin-6a1bb191/) to forecast north/south wind setup in the Indian River Lagoon. I developed the code to automate the extraction, transformation, and loading of numerical and observational weather data into the regression model and built the website to display the real-time wind setup forecasts.
 
-[**kmlb-ts**](https://github.com/bhlmn/kmlb-ts) investigates several machine learning classification methods in order to provide daily summertime forecasts of thunderstorm initiation near Melbourne Airport (KMLB). Still in the early stages!
+[**kmlb-ts**](https://github.com/bhlmn/kmlb-ts) uses an ensemble of machine learning methods to forecast summertime thunderstorm initiation near Melbourne Airport (KMLB). Still in the early stages!
 
-[**ml**](https://bhlmn.github.io/ml/) is where I collect and organize all of the things that I learn when studying machine learning.
+[**ml**](https://bhlmn.github.io/ml/) is where I collect and organize all of the things that I learn when studying machine learning, which happens nearly every day.
 
 [**WindVerification**](https://github.com/bhlmn/WindVerification) is an R Package designed to simplify processing and verifying wind forecasts from weather models.
 
