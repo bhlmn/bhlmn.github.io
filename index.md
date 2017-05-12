@@ -21,9 +21,6 @@ During my studies I've become passionate about data management, big data capabil
 [**ml**](https://bhlmn.github.io/ml/) is where I collect and organize my ever-increasing knowledge of machine learning.
 
 [**WindVerification**](https://github.com/bhlmn/WindVerification) is an R Package designed to simplify processing and verifying wind forecasts from weather models.
-
-**IRLFetch** - Wind fetch-based statistical bias correction and downscaling of wind speed forecasts over water bodies too small to be seen by weather models. Submitted to _Weather and Forecasting_.
-
 ---
 ## Skills
 
@@ -31,6 +28,9 @@ Everyday I develop with [R](https://www.r-project.org/) in [RStudio](https://www
 
 **Languages**: R, Python, Java, SQL, HTML, CSS, JavaScript, Matlab, bash, csh, Fortran
 
-**Software/Frameworks**: Tableau, Geographic Information Systems, Unix/Linux, Command Line, Spark, Git, Microsoft Office, LaTeX, Numerical Modeling
+**Software/Frameworks**: Tableau, Geographic Information Systems, Unix/Linux, Command Line, Git, Microsoft Office, LaTeX, Numerical Modeling
 
-**Statistical Techniques**: Classification (k-NN, Naive Bayes, Random Forests), Prediction (Multivariate/Logistic Regression, Neural Networks, SVMs, Gene Expression Programming), Clustering (k-means, fuzzy c-means)
+**Statistical/Machine Learning Techniques**
+* Classification (Nearest Neighbors, Logistic Regression, Random Forests)
+* Prediction (Multivariate/Polynomial Regression, Neural Networks)
+* Clustering (k-Means, fuzzy c-Means)
