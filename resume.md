@@ -3,9 +3,9 @@ layout: default
 title: 'Resume'
 ---
 
-## Resume
+## Profile
 
-Creative Ph. D. candidate with a strong background in statistics and data analysis. Passionate about using statistics and big data to help us all become better stewards of ourselves and the planet.
+Creative Ph. D. candidate with a strong background in statistics and data analysis. Captivated by big data, data science, and machine learning capabilities.
 
 ## Education
 
