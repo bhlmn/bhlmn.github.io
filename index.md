@@ -14,7 +14,7 @@ During my studies I've become passionate about data management, big data capabil
 ---
 ## Projects
 
-[**IRLSetup**](https://bhlmn.github.io/IRLSetup/) uses a polynomial regression model developed by my colleague [Jeff Colvin](https://www.linkedin.com/in/jeff-colvin-6a1bb191/) to forecast north/south wind setup in the Indian River Lagoon. I developed the code to automate the extraction, transformation, and loading of numerical and observational weather data into the regression model and built the website to display the real-time wind setup forecasts.
+[**IRLSetup**](https://fit-winds.github.io/IRLSetup/) uses a polynomial regression model developed by my colleague [Jeff Colvin](https://www.linkedin.com/in/jeff-colvin-6a1bb191/) to forecast north/south wind setup in the Indian River Lagoon. I developed the code to automate the extraction, transformation, and loading of numerical and observational weather data into the regression model and built the website to display the real-time wind setup forecasts.
 
 [**kmlb-ts**](https://github.com/bhlmn/kmlb-ts) uses an ensemble of machine learning methods to forecast summertime thunderstorm initiation near Melbourne Airport (KMLB). Still in the early stages!
 
