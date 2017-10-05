@@ -18,7 +18,7 @@ During my studies I've become passionate about data management, big data capabil
 
 [**kmlb-ts**](https://github.com/bhlmn/kmlb-ts) uses an ensemble of machine learning methods to forecast summertime thunderstorm initiation near Melbourne Airport (KMLB). Still in the early stages!
 
-[**ml**](https://bhlmn.github.io/ml/) is where I collect and organize my ever-increasing knowledge of machine learning.
+[**ds**](https://bhlmn.github.io/ds/) is where I collect and organize my ever-increasing knowledge of data science topics, such as ETL, machine learning, and data visualization.
 
 [**WindVerification**](https://github.com/bhlmn/WindVerification) is an R Package designed to simplify processing and verifying wind forecasts from weather models.
 
