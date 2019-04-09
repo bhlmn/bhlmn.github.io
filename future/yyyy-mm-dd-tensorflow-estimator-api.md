@@ -1,7 +1,7 @@
 ---
-layout: post
+# layout: post
 title:  "TensorFlow Estimator API"
-date:   YYYY-MM-DD HH:MM:DD
+# date:   YYYY-MM-DD HH:MM:DD
 categories: TensorFlow Estimator
 ---
 
