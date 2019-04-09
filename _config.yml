@@ -1,3 +1,16 @@
-title: Bryan Holman
-description: "I'm a Ph. D. candidate at the Florida Institute of Technology. I watch clouds, play with my kids, code in R and python, and study machine learning and data science."
-theme: jekyll-theme-minimal
+name: Bryan Holman
+description:
+meta_description: "Bryan Holman"
+
+markdown: kramdown
+highlighter: rouge
+logo: false
+paginate: 15
+baseurl: /
+domain_name: 'https://bhlmn.github.io'
+google_analytics: 'UA-XXXXXXXX-X'
+gems: [jekyll-paginate]
+
+# Details for the RSS feed generator
+url:            'https://bhlmn.github.io'
+author:         'Bryan Holman'
