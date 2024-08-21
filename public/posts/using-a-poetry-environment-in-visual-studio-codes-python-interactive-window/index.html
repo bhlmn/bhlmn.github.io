@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en-us"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">Using a Poetry environment in Visual Studio Code&#39;s Python Interactive window | Bryan Holman</title>
+<meta property="og:title" content="Using a Poetry environment in Visual Studio Code&#39;s Python Interactive window | Bryan Holman" />
+<meta name="twitter:title" content="Using a Poetry environment in Visual Studio Code&#39;s Python Interactive window | Bryan Holman" />
+<meta itemprop="name" content="Using a Poetry environment in Visual Studio Code&#39;s Python Interactive window | Bryan Holman" />
+<meta name="application-name" content="Using a Poetry environment in Visual Studio Code&#39;s Python Interactive window | Bryan Holman" />
+<meta property="og:site_name" content="Bryan Holman" />
+
+<meta name="description" content="Minimal Hugo blog theme with light and dark mode support">
+<meta itemprop="description" content="Minimal Hugo blog theme with light and dark mode support" />
+<meta property="og:description" content="Minimal Hugo blog theme with light and dark mode support" />
+<meta name="twitter:description" content="Minimal Hugo blog theme with light and dark mode support" />
+
+<meta property="og:locale" content="en-us" />
+<meta name="language" content="en-us" />
+
+  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/posts/using-a-poetry-environment-in-visual-studio-codes-python-interactive-window/" title="English" />
+
+
+
+
+
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2024-08-20T16:04:14-0700 />
+    <meta property="article:published_time" content=2024-08-20T16:04:14-0700 />
+    <meta property="og:url" content="http://localhost:1313/posts/using-a-poetry-environment-in-visual-studio-codes-python-interactive-window/" />
+
+    
+    <meta property="og:article:author" content="Bryan Holman" />
+    <meta property="article:author" content="Bryan Holman" />
+    <meta name="author" content="Bryan Holman" />
+    
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "Using a Poetry environment in Visual Studio Code's Python Interactive window",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2024-08-20",
+        "description": "",
+        "wordCount":  531 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2024-08-20",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Bryan Holman"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.133.0">
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/posts/using-a-poetry-environment-in-visual-studio-codes-python-interactive-window/">
+    <link href="/style.min.d43bc6c79baa87f006efb2b92be952faeedeb1a3ab626c1d6abda52eae049355.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    </head>
+<body data-theme = "auto" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/posts/">
+                        Blog
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/pages/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/pages/resources/">
+                        Resources
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">Using a Poetry environment in Visual Studio Code&#39;s Python Interactive window</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2024-08-20T16:04:14-07:00" itemprop="datePublished"> Aug 20, 2024 </time>
+                </div>
+                
+            </header>
+            
+    
+    <details class="toc" ZgotmplZ>
+        <summary><b>Table of Contents</b></summary>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-poetry">What is poetry?</a></li>
+    <li><a href="#how-poetry-works">How poetry works</a></li>
+    <li><a href="#running-code-with-poetry">Running code with poetry</a></li>
+    <li><a href="#using-python-interactive-window-with-poetry">Using Python Interactive window with poetry</a></li>
+  </ul>
+</nav>
+    </details>
+            <div class="page-content">
+                <h2 id="what-is-poetry">What is poetry?</h2>
+<p><a href="https://python-poetry.org/">Poetry</a> is a slick package builder and dependency manager for python projects. It helps project contributors specify and setup their Python virtual environment.</p>
+<p>Say you are working on a python project and need to incorporate a non-standard library, such as <a href="https://pandas.pydata.org/">pandas</a>. You can install it with <code>pip install pandas</code> and it will be available for you to use. Other contributors would need to manually do the same or else their environments will be out of date.</p>
+<p>To simplify this task you can include <code>pandas</code> (and other non-standard libraries) in a <code>requirements.txt</code> file associated with your project. Other contributors will need to run only one command to install all of your project&rsquo;s dependencies:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">pip install -r requirements.txt
+</span></span></code></pre></div><p>While a simplified workflow, this still leaves any contributor with two steps when they need to add a library to a project: 1. install the library and 2. add it to the <code>requirements.txt</code> file. Wouldn&rsquo;t it be nice if we could accomplish both steps with one command?</p>
+<p>Enter poetry.</p>
+<h2 id="how-poetry-works">How poetry works</h2>
+<p>Once poetry has been <a href="https://python-poetry.org/docs/basic-usage/">setup for a project</a>, you can install a library <em>and</em> add it as a dependency for your project with only one command, for example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">poetry add pandas
+</span></span></code></pre></div><p>Poetry manages a virtual python environment for your project. When you run the above command it installs the library in that virtual environment, and also notes that library as a dependency in a <code>pyproject.toml</code> file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">tool</span><span class="p">.</span><span class="nx">poetry</span><span class="p">.</span><span class="nx">dependencies</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">pandas</span> <span class="p">=</span> <span class="s2">&#34;^2.2.2&#34;</span>
+</span></span></code></pre></div><p>As other contributors work on your project, all they will need to do to keep their environment up-to-date (granted that they have installed poetry) is run <code>poetry install</code>.</p>
+<h2 id="running-code-with-poetry">Running code with poetry</h2>
+<p>Since poetry is managing a virtual environment behind the scenes, once you are ready to run some code simply running <code>python your_project.py</code> as poetry&rsquo;s virtual environment is not activated. Instead you can use <code>poetry run python your_project.py</code>, which activates the virtual environment before running the code.</p>
+<p><code>poetry run</code> is also useful for running other python-based command line tools that you might use for your project, such as:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">poetry run pre-commit install <span class="c1"># setting up pre-commit workflows</span>
+</span></span><span class="line"><span class="cl">poetry run pytest <span class="c1"># running tests</span>
+</span></span><span class="line"><span class="cl">poetry run black <span class="c1"># code formatting</span>
+</span></span></code></pre></div><h2 id="using-python-interactive-window-with-poetry">Using Python Interactive window with poetry</h2>
+<p>A development workflow I encourage (as opposed to using <a href="https://jupyter.org/">Jupyter Notebooks</a>, for example) is writing code in python files and executing code in an interactive shell. Visual Studio Code&rsquo;s <a href="https://code.visualstudio.com/docs/python/jupyter-support-py#_using-the-python-interactive-window">Python Interactive window</a> is great for this workflow. As you are writing your code, hit <code>Shift+Enter</code> to run whatever line is you are working on. An interactive window will appear, connect to a python kernel, and you can now easily both write and run code snippets.</p>
+<p>Since we&rsquo;re using poetry to manage our virtual environment, however, the python kernel to which we <em>want to</em> connect won&rsquo;t be accessible. What to do?</p>
+<p><a href="https://marketplace.visualstudio.com/items?itemName=ameenahsanma.poetry-monorepo"><code>poetry-monorepo</code></a> to the rescue.</p>
+<p><code>poetry-monorepo</code> is a Visual Studio Code extension designed to help for this specific use case. From the <a href="https://github.com/ihsan-96/vscode-python-poetry-monorepo">project&rsquo;s readme</a>, it:</p>
+<blockquote>
+<p>Automatically sets the Python interpreter based on the closest pyproject.toml file in the workspace.</p>
+</blockquote>
+<p>Sure enough, after installing that extension, when you select your python environment in the interactive window, one of the options will be your current poetry environment.</p>
+<p><img alt="Python Interpreter" src="/posts/using-a-poetry-environment-in-visual-studio-codes-python-interactive-window/python_interpreter.png"></p>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://linkedin.com/in/bhlmn" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+<a href="https://github.com/bhlmn" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Bryan Holman.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>
