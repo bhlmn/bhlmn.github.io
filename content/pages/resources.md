@@ -41,10 +41,12 @@ Blogs:
 * [AI Snake Oil](https://www.aisnakeoil.com/) – What artificial intelligence can do, what it can't, and how to tell the difference (Narayanan & Kapoor).
 
 Packages:
+* [DSPy](https://dspy-docs.vercel.app/docs/intro) for optimizing LLM prompts.
 * [Instructor](https://python.useinstructor.com/) for structuring LLM output.
 * [LangChain](https://api.python.langchain.com/en/latest/langchain_api_reference.html) for developing LLM-powered applications.
 * [Langfuse](https://langfuse.com/docs) for monitoring and evaluating LLM-powered applications.
 * [LangSmith](https://docs.smith.langchain.com/) for monitoring and evaluating LLM-powered applications.
+* [Semantic Kernel](https://learn.microsoft.com/en-us/semantic-kernel/overview/) is Microsoft's LLM SDK.
 
 ## Python
 
