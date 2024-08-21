@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Bryan Holman</title>
+    <link>http://localhost:1313/pages/</link>
+    <description>Recent content in Pages on Bryan Holman</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://localhost:1313/pages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About Bryan</title>
+      <link>http://localhost:1313/pages/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/pages/about/</guid>
+      
+      <description>I&amp;rsquo;m a meteorologist turned data scientist.
+In graduate school I studied how feature engineering and machine learning could improve wind forecasts–picking up Python, R, SQL, and data science along the way.
+After graduate school I joined Kyruus Health, where I dove into data engineering, the cloud (GCP and AWS), dbt, and people/project leadership.
+Currently I&amp;rsquo;m an AI Architect at Insight, where I design and build AI/ML-powered applications.
+From five to nine I&amp;rsquo;m spending time with my amazing family, working out, playing sports, listening to instrumental rock, drumming, and enjoying all the Pacific Northwest has to offer.</description>
+      
+    </item>
+    
+    <item>
+      <title>Resources</title>
+      <link>http://localhost:1313/pages/resources/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/pages/resources/</guid>
+      
+      <description>Most of what I&amp;rsquo;ve learned during my career has been through on-the-job learning or self-study. The internet has a wealth of valuable content, one just needs to know where to find it.
+Here I&amp;rsquo;ve collected the resources to which I refer the most.
+Data analysis Packages:
+Pandas for data analysis plotly for data visualization Data engineering Documentation:
+dbt&amp;rsquo;s best practices GoogleSQL reference for BigQuery Machine learning/AI Courses:
+Machine Learning Engineer learning path with Google Cloud Documentation:</description>
+      
+    </item>
+    
+  </channel>
+</rss>

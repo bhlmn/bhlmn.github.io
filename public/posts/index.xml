@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Bryan Holman</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on Bryan Holman</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 20 Aug 2024 16:04:14 -0700</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using a Poetry environment in Visual Studio Code&#39;s Python Interactive window</title>
+      <link>http://localhost:1313/posts/using-a-poetry-environment-in-visual-studio-codes-python-interactive-window/</link>
+      <pubDate>Tue, 20 Aug 2024 16:04:14 -0700</pubDate>
+      
+      <guid>http://localhost:1313/posts/using-a-poetry-environment-in-visual-studio-codes-python-interactive-window/</guid>
+      
+      <description>What is poetry? Poetry is a slick package builder and dependency manager for python projects. It helps project contributors specify and setup their Python virtual environment.
+Say you are working on a python project and need to incorporate a non-standard library, such as pandas. You can install it with pip install pandas and it will be available for you to use. Other contributors would need to manually do the same or else their environments will be out of date.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bryan Holman</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Bryan Holman</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 20 Aug 2024 16:04:14 -0700</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using a Poetry environment in Visual Studio Code&#39;s Python Interactive window</title>
+      <link>http://localhost:1313/posts/using-a-poetry-environment-in-visual-studio-codes-python-interactive-window/</link>
+      <pubDate>Tue, 20 Aug 2024 16:04:14 -0700</pubDate>
+      
+      <guid>http://localhost:1313/posts/using-a-poetry-environment-in-visual-studio-codes-python-interactive-window/</guid>
+      
+      <description>What is poetry? Poetry is a slick package builder and dependency manager for python projects. It helps project contributors specify and setup their Python virtual environment.
+Say you are working on a python project and need to incorporate a non-standard library, such as pandas. You can install it with pip install pandas and it will be available for you to use. Other contributors would need to manually do the same or else their environments will be out of date.</description>
+      
+    </item>
+    
+    <item>
+      <title>About Bryan</title>
+      <link>http://localhost:1313/pages/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/pages/about/</guid>
+      
+      <description>I&amp;rsquo;m a meteorologist turned data scientist.
+In graduate school I studied how feature engineering and machine learning could improve wind forecasts–picking up Python, R, SQL, and data science along the way.
+After graduate school I joined Kyruus Health, where I dove into data engineering, the cloud (GCP and AWS), dbt, and people/project leadership.
+Currently I&amp;rsquo;m an AI Architect at Insight, where I design and build AI/ML-powered applications.
+From five to nine I&amp;rsquo;m spending time with my amazing family, working out, playing sports, listening to instrumental rock, drumming, and enjoying all the Pacific Northwest has to offer.</description>
+      
+    </item>
+    
+    <item>
+      <title>Resources</title>
+      <link>http://localhost:1313/pages/resources/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/pages/resources/</guid>
+      
+      <description>Most of what I&amp;rsquo;ve learned during my career has been through on-the-job learning or self-study. The internet has a wealth of valuable content, one just needs to know where to find it.
+Here I&amp;rsquo;ve collected the resources to which I refer the most.
+Data analysis Packages:
+Pandas for data analysis plotly for data visualization Data engineering Documentation:
+dbt&amp;rsquo;s best practices GoogleSQL reference for BigQuery Machine learning/AI Courses:
+Machine Learning Engineer learning path with Google Cloud Documentation:</description>
+      
+    </item>
+    
+  </channel>
+</rss>
