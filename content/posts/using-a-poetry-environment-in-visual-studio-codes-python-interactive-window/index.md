@@ -4,9 +4,11 @@ date = 2024-08-20T16:04:14-07:00
 draft = false
 +++
 
+**tl;dr** – _If you manage your project's dependencies with [Poetry](https://python-poetry.org/), develop in Visual Studio (VS) Code, and use VS Code's Python interactive window, you can use the [`poetry-monorepo`](https://marketplace.visualstudio.com/items?itemName=ameenahsanma.poetry-monorepo) extension to select your project's poetry environment as the interactive kernel._
+
 ## What is poetry?
 
-[Poetry](https://python-poetry.org/) is a slick package builder and dependency manager for python projects. It helps project contributors specify and setup their Python virtual environment.
+[Poetry](https://python-poetry.org/) is a slick package builder and dependency manager for python projects. It helps project contributors specify and setup their Python environment.
 
 Say you are working on a python project and need to incorporate a non-standard library, such as [pandas](https://pandas.pydata.org/). You can install it with `pip install pandas` and it will be available for you to use. Other contributors would need to manually do the same or else their environments will be out of date. 
 

@@ -53,7 +53,7 @@
         },
         "datePublished": "2024-08-20",
         "description": "",
-        "wordCount":  531 ,
+        "wordCount":  569 ,
         "mainEntityOfPage": "True",
         "dateModified": "2024-08-20",
         "image": {
@@ -192,8 +192,9 @@ stroke-linejoin="round" class="feather feather-home">
 </nav>
     </details>
             <div class="page-content">
-                <h2 id="what-is-poetry">What is poetry?</h2>
-<p><a href="https://python-poetry.org/">Poetry</a> is a slick package builder and dependency manager for python projects. It helps project contributors specify and setup their Python virtual environment.</p>
+                <p><strong>tl;dr</strong> – <em>If you manage your project&rsquo;s dependencies with <a href="https://python-poetry.org/">Poetry</a>, develop in Visual Studio (VS) Code, and use VS Code&rsquo;s Python interactive window, you can use the <a href="https://marketplace.visualstudio.com/items?itemName=ameenahsanma.poetry-monorepo"><code>poetry-monorepo</code></a> extension to select your project&rsquo;s poetry environment as the interactive kernel.</em></p>
+<h2 id="what-is-poetry">What is poetry?</h2>
+<p><a href="https://python-poetry.org/">Poetry</a> is a slick package builder and dependency manager for python projects. It helps project contributors specify and setup their Python environment.</p>
 <p>Say you are working on a python project and need to incorporate a non-standard library, such as <a href="https://pandas.pydata.org/">pandas</a>. You can install it with <code>pip install pandas</code> and it will be available for you to use. Other contributors would need to manually do the same or else their environments will be out of date.</p>
 <p>To simplify this task you can include <code>pandas</code> (and other non-standard libraries) in a <code>requirements.txt</code> file associated with your project. Other contributors will need to run only one command to install all of your project&rsquo;s dependencies:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">pip install -r requirements.txt
