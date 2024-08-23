@@ -48,6 +48,9 @@ Packages:
 * [LangSmith](https://docs.smith.langchain.com/) for monitoring and evaluating LLM-powered applications.
 * [Semantic Kernel](https://learn.microsoft.com/en-us/semantic-kernel/overview/) is Microsoft's LLM SDK.
 
+Sites:
+* The [Prompt engineering guide](https://www.promptingguide.ai/) introduces prompt engineering and goes into depth on various techniques.
+
 ## Python
 
 Packages:
