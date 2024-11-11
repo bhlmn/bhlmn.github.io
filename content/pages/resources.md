@@ -23,6 +23,8 @@ Documentation:
 ## Machine learning/AI
 
 Courses:
+* [Azure AI Fundamentals](https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/?practice-assessment-type=certification)
+* [Azure AI Engineer](https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-engineer/?practice-assessment-type=certification)
 * [Machine Learning Engineer](https://www.cloudskillsboost.google/paths/17) learning path with Google Cloud
 
 Documentation:
@@ -35,6 +37,7 @@ Packages:
 ## LLMs
 
 Articles:
+* [58 prompting techniques](https://python.useinstructor.com/prompting/) by Jason Liu.
 * [What We’ve Learned From A Year of Building with LLMs](https://applied-llms.org/) – A practical guide to building successful LLM products (Yan _et al._).
 
 Blogs:
@@ -50,6 +53,10 @@ Packages:
 
 Sites:
 * The [Prompt engineering guide](https://www.promptingguide.ai/) introduces prompt engineering and goes into depth on various techniques.
+
+Tools:
+* [Pinecone](https://www.pinecone.io/) is a vector database, it also has a lot of great [courses](https://www.pinecone.io/learn/) about building LLM-powered apps.
+* [Weaviate](https://weaviate.io/) is a vector database.
 
 ## Python
 
