@@ -19,6 +19,8 @@
   </url><url>
     <loc>http://localhost:1313/pages/resources/</loc>
   </url><url>
+    <loc>http://localhost:1313/pages/study-materials/</loc>
+  </url><url>
     <loc>http://localhost:1313/tags/</loc>
   </url>
 </urlset>

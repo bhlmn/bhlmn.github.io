@@ -6,7 +6,21 @@
     <description>Recent content on Bryan Holman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Aug 2024 16:04:14 -0700</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Nov 2024 10:31:14 -0700</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Azure AI Fundamentals Study Guide</title>
+      <link>http://localhost:1313/posts/azure-ai-fundamentals-study-guide/</link>
+      <pubDate>Mon, 11 Nov 2024 10:31:14 -0700</pubDate>
+      
+      <guid>http://localhost:1313/posts/azure-ai-fundamentals-study-guide/</guid>
+      
+      <description>Below are questions to know the answer to pass the Azure AI Fundamentals (AI-900) exam.
+Resources Microsoft&amp;rsquo;s official study guide for the exam. Microsoft&amp;rsquo;s official practice exam, which has 50 practice questions. I&amp;rsquo;d recommend taking it more than once. AI Overview What is artificial intelligence? Software that imitates human behaviors and capabilities.
+What are the key ML workloads that Azure supports? Key ML workloads:
+Custom machine learning Computer vision APIs Natural language processing Document intelligence Knowledge mining (search indexes) Generative AI What are challenges and risks specific to AI systems?</description>
+      
+    </item>
+    
     <item>
       <title>Using a Poetry environment in Visual Studio Code&#39;s Python Interactive window</title>
       <link>http://localhost:1313/posts/using-a-poetry-environment-in-visual-studio-codes-python-interactive-window/</link>
@@ -30,7 +44,7 @@ Say you are working on a python project and need to incorporate a non-standard l
       <description>I&amp;rsquo;m a meteorologist turned data scientist.
 In graduate school I studied how feature engineering and machine learning could improve wind forecasts–picking up Python, R, SQL, and data science along the way.
 After graduate school I joined Kyruus Health, where I dove into data engineering, the cloud (GCP and AWS), dbt, and people/project leadership.
-Currently I&amp;rsquo;m an AI Architect at Insight, where I design and build AI/ML-powered applications.
+Currently I&amp;rsquo;m an AI Architect and Engineer at Insight, where I design and build AI/ML-powered applications.
 From five to nine I&amp;rsquo;m spending time with my amazing family, working out, playing sports, listening to instrumental rock, drumming, and enjoying all the Pacific Northwest has to offer.</description>
       
     </item>
@@ -47,7 +61,20 @@ Here I&amp;rsquo;ve collected the resources to which I refer the most.
 Data analysis Packages:
 Pandas for data analysis plotly for data visualization Data engineering Documentation:
 dbt&amp;rsquo;s best practices GoogleSQL reference for BigQuery Machine learning/AI Courses:
-Machine Learning Engineer learning path with Google Cloud Documentation:</description>
+Azure AI Fundamentals Azure AI Engineer Machine Learning Engineer learning path with Google Cloud Documentation:</description>
+      
+    </item>
+    
+    <item>
+      <title>Study Materials</title>
+      <link>http://localhost:1313/pages/study-materials/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/pages/study-materials/</guid>
+      
+      <description>I&amp;rsquo;m an avid learner. It is something I do every day.
+This is my process to learn and retain technical material as quickly as possible:
+Read new material every day, for at least 30 minutes. Brainstorm questions that could be asked about the material as I read. Jot down the answers to those questions. Cite sources. The outcome is a lot of questions and answers that are great to review when studying for an exam.</description>
       
     </item>
     

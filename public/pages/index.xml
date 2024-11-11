@@ -16,7 +16,7 @@
       <description>I&amp;rsquo;m a meteorologist turned data scientist.
 In graduate school I studied how feature engineering and machine learning could improve wind forecasts–picking up Python, R, SQL, and data science along the way.
 After graduate school I joined Kyruus Health, where I dove into data engineering, the cloud (GCP and AWS), dbt, and people/project leadership.
-Currently I&amp;rsquo;m an AI Architect at Insight, where I design and build AI/ML-powered applications.
+Currently I&amp;rsquo;m an AI Architect and Engineer at Insight, where I design and build AI/ML-powered applications.
 From five to nine I&amp;rsquo;m spending time with my amazing family, working out, playing sports, listening to instrumental rock, drumming, and enjoying all the Pacific Northwest has to offer.</description>
       
     </item>
@@ -33,7 +33,18 @@ Here I&amp;rsquo;ve collected the resources to which I refer the most.
 Data analysis Packages:
 Pandas for data analysis plotly for data visualization Data engineering Documentation:
 dbt&amp;rsquo;s best practices GoogleSQL reference for BigQuery Machine learning/AI Courses:
-Machine Learning Engineer learning path with Google Cloud Documentation:</description>
+Azure AI Fundamentals Azure AI Engineer Machine Learning Engineer learning path with Google Cloud Documentation:</description>
+      
+    </item>
+    
+    <item>
+      <title>Study Materials</title>
+      <link>http://localhost:1313/pages/study-materials/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/pages/study-materials/</guid>
+      
+      <description>Hello there.</description>
       
     </item>
     

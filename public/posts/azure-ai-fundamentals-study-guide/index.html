@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en-us"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">Azure AI Fundamentals Study Guide | Bryan Holman</title>
+<meta property="og:title" content="Azure AI Fundamentals Study Guide | Bryan Holman" />
+<meta name="twitter:title" content="Azure AI Fundamentals Study Guide | Bryan Holman" />
+<meta itemprop="name" content="Azure AI Fundamentals Study Guide | Bryan Holman" />
+<meta name="application-name" content="Azure AI Fundamentals Study Guide | Bryan Holman" />
+<meta property="og:site_name" content="Bryan Holman" />
+
+<meta name="description" content="Minimal Hugo blog theme with light and dark mode support">
+<meta itemprop="description" content="Minimal Hugo blog theme with light and dark mode support" />
+<meta property="og:description" content="Minimal Hugo blog theme with light and dark mode support" />
+<meta name="twitter:description" content="Minimal Hugo blog theme with light and dark mode support" />
+
+<meta property="og:locale" content="en-us" />
+<meta name="language" content="en-us" />
+
+  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/posts/azure-ai-fundamentals-study-guide/" title="English" />
+
+
+
+
+
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2024-11-11T10:31:14-0700 />
+    <meta property="article:published_time" content=2024-11-11T10:31:14-0700 />
+    <meta property="og:url" content="http://localhost:1313/posts/azure-ai-fundamentals-study-guide/" />
+
+    
+    <meta property="og:article:author" content="Bryan Holman" />
+    <meta property="article:author" content="Bryan Holman" />
+    <meta name="author" content="Bryan Holman" />
+    
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "Azure AI Fundamentals Study Guide",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2024-11-11",
+        "description": "",
+        "wordCount":  1280 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2024-11-11",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Bryan Holman"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.133.0">
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/posts/azure-ai-fundamentals-study-guide/">
+    <link href="/style.min.d43bc6c79baa87f006efb2b92be952faeedeb1a3ab626c1d6abda52eae049355.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    </head>
+<body data-theme = "auto" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/posts/">
+                        Blog
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/pages/study-materials/">
+                        Study Materials
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/pages/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/pages/resources/">
+                        Resources
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">Azure AI Fundamentals Study Guide</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2024-11-11T10:31:14-07:00" itemprop="datePublished"> Nov 11, 2024 </time>
+                </div>
+                
+            </header>
+            
+    
+    <details class="toc" ZgotmplZ>
+        <summary><b>Table of Contents</b></summary>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#resources">Resources</a></li>
+    <li><a href="#ai-overview">AI Overview</a>
+      <ul>
+        <li><a href="#fundamentals-of-machine-learning">Fundamentals of Machine Learning</a></li>
+        <li><a href="#fundamentals-of-azure-ai-services">Fundamentals of Azure AI services</a></li>
+      </ul>
+    </li>
+    <li><a href="#computer-vision">Computer Vision</a>
+      <ul>
+        <li><a href="#facial-recognition">Facial Recognition</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </details>
+            <div class="page-content">
+                <p>Below are questions to know the answer to pass the <a href="https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/?practice-assessment-type=certification">Azure AI Fundamentals (AI-900)</a> exam.</p>
+<h2 id="resources">Resources</h2>
+<ul>
+<li>Microsoft&rsquo;s <a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-900">official study guide</a> for the exam.</li>
+<li>Microsoft&rsquo;s <a href="https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/practice/assessment?assessment-type=practice&assessmentId=26&practice-assessment-type=certification">official practice exam</a>, which has 50 practice questions. I&rsquo;d recommend taking it more than once.</li>
+</ul>
+<h2 id="ai-overview">AI Overview</h2>
+<details>
+<summary>What is artificial intelligence?</summary>
+<blockquote>
+<p>Software that imitates human behaviors and capabilities.</p>
+</blockquote>
+</details>
+<details>
+<summary>What are the key ML workloads that Azure supports?</summary>
+<blockquote>
+<p>Key ML workloads:</p>
+<ul>
+<li>Custom machine learning</li>
+<li>Computer vision APIs</li>
+<li>Natural language processing</li>
+<li>Document intelligence</li>
+<li>Knowledge mining (search indexes)</li>
+<li>Generative AI</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>What are challenges and risks specific to AI systems?</summary>
+<blockquote>
+<p>AI systems have several unique challenges:</p>
+<ul>
+<li>Biases present in training data will carry forward into the AI system.</li>
+<li>Inference errors can do real world damage.</li>
+<li>Sensitive data (such as PII and PHI) can be exposed.</li>
+<li>Some AI systems are black boxes and hard to explain.</li>
+<li>We don&rsquo;t have great frameworks for determining who is liable for AI-driven decisions.</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>What are the six responsible AI principles?</summary>
+<blockquote>
+<p>AI systems should be (<a href="https://learn.microsoft.com/en-us/azure/machine-learning/concept-responsible-ai?view=azureml-api-2">source</a>):</p>
+<ul>
+<li>Fair – &ldquo;AI systems should treat everyone fairly and avoid affecting similarly situated groups of people in different ways.&rdquo;</li>
+<li>Reliable and safe – &ldquo;To build trust, it&rsquo;s critical that AI systems operate reliably, safely, and consistently. These systems should be able to operate as they were originally designed, respond safely to unanticipated conditions, and resist harmful manipulation.&rdquo;</li>
+<li>Private and secure – AI systems must comply with data privacy laws, be transparent about how data are used and stored, and be resilient to attacks.</li>
+<li>Inclusive – AI systems should empower and engage everyone equally.</li>
+<li>Transparent (and understandable) – We need to be able to understand how AI systems arrive at their predictions.</li>
+<li>Accountable – AI systems and those that build them should be accountable and answerable. They should be developed according to legal and organizational policies.</li>
+</ul>
+</blockquote>
+</details>
+<h3 id="fundamentals-of-machine-learning">Fundamentals of Machine Learning</h3>
+<details>
+<summary>What are the main types of machine learning problems?</summary>
+<blockquote>
+<p>Supervised learning:</p>
+<ul>
+<li>Regression</li>
+<li>Classification
+<ul>
+<li>Binary (two possible classes)</li>
+<li>Multi-class (many possible classes)</li>
+</ul>
+</li>
+</ul>
+<p>Unsupervised:</p>
+<ul>
+<li>Clustering</li>
+</ul>
+<p>Time series analysis</p>
+</blockquote>
+</details>
+<details>
+<summary>What are common evaluation metrics for regression problems?</summary>
+<blockquote>
+<p>Common metrics are:</p>
+<ul>
+<li>Mean absolute error (MAE).</li>
+<li>Mean squared error (MSE), which further penalizes larger errors.</li>
+<li>Root mean square error (RMSE), which also greater penalizes larger errors, but maintains the same units as the label.</li>
+<li>Coefficient of determination (R squared), which is the percentage of variance explained by the model.</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>What are common evaluation metrics for classification problems?</summary>
+<blockquote>
+<p>Common classification metrics are:</p>
+<ul>
+<li>Accuracy – the percentage of predictions the model got right. Optimize for this when classes are balanced and false negatives/positives are equally bad.</li>
+<li>Recall (true positive rate, or TPR) – the percentage of positive predictions the model got right. Optimize for this when a false negative is worse than a false positive.</li>
+<li>Precision – the percentage of predicted positives the model got right. Optimize for this when a false positive is <em>worse</em> than a false negative.</li>
+<li>F1 score is a combination of recall and precision.</li>
+<li>Area under the curve (AUC) - compares the trupe positive rate and false positive rate for different classification thresholds (from 0 to 1). Values better than 0.5 (randomly guessing) indicate a good model.</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>How are clustering models evaluated?</summary>
+<blockquote>
+<p>Since there is no right answer, clustering models tend to optimize for one of the following:</p>
+<ul>
+<li>Average distance to cluster center – how close, on average, each point in the cluster is to the center of the cluster.</li>
+<li>Average distance to other center</li>
+<li>Maximum distance to cluster center</li>
+<li>Silhouette – summarizes the ratio of distance between points in the same cluster and points in different clusters (closer to 1 the better).</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>Which Azure services enable ML projects?</summary>
+<blockquote>
+<p>Services:</p>
+<ul>
+<li>Azure Machine Learning</li>
+<li>Azure Machine Learning Studio</li>
+</ul>
+<p>With these services you can:</p>
+<ul>
+<li>Import and explore data</li>
+<li>Create and use compute resources</li>
+<li>Do data science work in notebooks</li>
+<li>Create training jobs and pipelines</li>
+<li>Use AutoML to train models</li>
+<li>View details of trained models (eval metrics, training parameters, responsible AI info)</li>
+<li>Deploy trained models for live or batch inference</li>
+<li>Import and manage models via a model catalog</li>
+</ul>
+</blockquote>
+</details>
+<h3 id="fundamentals-of-azure-ai-services">Fundamentals of Azure AI services</h3>
+<details>
+<summary>How do Azure AI services improve speed-to-market for AI solutions?</summary>
+<blockquote>
+<ul>
+<li>They are prebuilt models that are ready to use</li>
+<li>They are accessed through APIs</li>
+<li>They are available on Azure</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>How are Azure services provisioned?</summary>
+<blockquote>
+<p>To provision an Azure service, you need to have:</p>
+<ul>
+<li>An Azure subscription (account)</li>
+<li>A resource group</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>What are the two types of Azure service resources, and when might you use each?</summary>
+<blockquote>
+<ul>
+<li>A <strong>single-service resource</strong> provides access to a single Azure service. This is a good strategy when you only need one Azure resource for a project or when you want to see cost information separately.</li>
+<li>A <strong>multi-service resource</strong> provides access to many Azure services with a single key and endpoint. With this strategy all services are billed together. This is helpful when you need several Azure services or are exploring capabilities.</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>What are the different service studio interfaces, and what do they do?</summary>
+<blockquote>
+<ul>
+<li>Vision Studio let&rsquo;s you explore Azure Vision capabilities</li>
+<li>Language Studio – Language services</li>
+<li>Speech Studio – Speech to text and text to speech</li>
+<li>Content Safety Studio – Content safety functionality</li>
+<li>Azure AI Studio – Develop GenAI solutions and custom copilots</li>
+<li>Azure ML Studio – ML lifecycle and autoML</li>
+</ul>
+</blockquote>
+</details>
+<h2 id="computer-vision">Computer Vision</h2>
+<details>
+<summary>What are the main computer vision tasks?</summary>
+<blockquote>
+<p>Common computer vision tasks are:</p>
+<ul>
+<li>Image classification (easy) – classifying images based on their contents</li>
+<li>Object detection (harder) – classifying multiple objects in an image and identifying their location with a bounding box.</li>
+<li>Semantic segmentation (hardest) – individual pixels are classified according to the object to which they belong.</li>
+<li>Image analysis – generating a text caption for an image.</li>
+<li>Facial detection and recognition – detecting and identifying faces in an image.
+– Optical character recognition (OCR) – detect and extract text in images.</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>What resource(s) need provisioned to work with Azure AI Vision service?</summary>
+<blockquote>
+<p>Either Azure AI Vision or Azure AI Services.</p>
+</blockquote>
+</details>
+<details>
+<summary>What image analysis capabilities does Azure AI Vision offer?</summary>
+<blockquote>
+<ul>
+<li>Optical character recognition (OCR)</li>
+<li>Generating image captions and descriptions</li>
+<li>Object detection</li>
+<li>Object tagging (multiple text keywords for the image)</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>When might you need to train your own custom vision models in Azure AI Vision?</summary>
+<blockquote>
+<p>When the built-in models don&rsquo;t meet your needs out of the box. You can fine tune a custom model for the following use cases. Just bring your images!</p>
+<ul>
+<li>Image classification</li>
+<li>Object detection</li>
+</ul>
+</blockquote>
+</details>
+<h3 id="facial-recognition">Facial Recognition</h3>
+<details>
+<summary>What Azure AI services help with facial detection and analysis?</summary>
+<blockquote>
+<ul>
+<li>Azure AI Face is the Azure service for facial detection, analysis, and recognition.</li>
+<li>Azure AI Video Indexer enables facial detection and identification in videos.</li>
+<li>Azure AI Vision offers face detection and basic face analysis.</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>What is the difference between face detection, face analysis, and facial recognition?</summary>
+<blockquote>
+<ul>
+<li>Facial detection is the process of identifying and locating faces in images or video.</li>
+<li>Facial analysis analyzes facial features.</li>
+<li>Facial recognition is a branch of face analysis that tries to identify known individuals based on their faces being present in images or video.</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>What facial attributes can be returned by Azure AI Face?</summary>
+<blockquote>
+<ul>
+<li>Whether the face has accessories such as headwear, glasses or a mask.</li>
+<li>How blurred the face is.</li>
+<li>The orientation of the face in 3D space (its pose)</li>
+<li>The noise of the image</li>
+<li>How occluded (blocked) the face is.</li>
+<li>How good the image might be for facial recognition (high, medium, or low).</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>Which capabilities of Azure AI Face require customers to submit an intake form (because of potential security/ethical concerns)?</summary>
+<blockquote>
+<ul>
+<li>Face identification</li>
+<li>Face verification – seeing if the face in an image is similar to a face in another image</li>
+<li>Liveness detection – to determine if an image or video is fake</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>How can you use AI Face service in a no-code way?</summary>
+<blockquote>
+<p>Play with the service in Azure Vision Studio!</p>
+</blockquote>
+</details>
+<details>
+<summary>Question</summary>
+<blockquote>
+<p>Answer</p>
+</blockquote>
+</details>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://linkedin.com/in/bhlmn" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+<a href="https://github.com/bhlmn" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Bryan Holman.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

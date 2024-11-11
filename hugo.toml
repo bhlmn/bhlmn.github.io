@@ -54,16 +54,20 @@ ignoreErrors = ["additional-script-loading-error"] # ignore error of loading add
     url = '/posts/'
     weight = 20
   [[Languages.en-us.menu.main]]
+    pageRef="study"
+    name = 'Study Materials'
+    url = '/pages/study-materials/'
+    weight = 30
+  [[Languages.en-us.menu.main]]
     pageRef="about"
     name = 'About'
     url = '/pages/about/'
-    weight = 30
-
+    weight = 40
   [[Languages.en-us.menu.main]]
     pageRef="resources"
     name = 'Resources'
     url = '/pages/resources/'
-    weight = 40
+    weight = 50
 
 [Languages.en-us.params]
   sitename = "Bryan Holman"
@@ -93,7 +97,7 @@ ignoreErrors = ["additional-script-loading-error"] # ignore error of loading add
   # Note: image is not rendered if the resource(avatar image) is not found. No error is displayed.
   intro = "Hey there, I'm Bryan"
   name = "Bryan Holman"
-  description = "I'm a data scientist based in Portland, OR. On this site I share my thoughts about code, AI, exercise, and life."
+  description = "I'm a Data Scientist and Data/AI Engineer based in Portland, OR. On this site I share my thoughts about code, AI, exercise, music, and life."
 
 # Allow to override webmanifest options
 [Languages.en-us.params.webmanifest]
