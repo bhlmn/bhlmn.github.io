@@ -53,7 +53,7 @@
         },
         "datePublished": "2024-11-11",
         "description": "",
-        "wordCount":  1280 ,
+        "wordCount":  4301 ,
         "mainEntityOfPage": "True",
         "dateModified": "2024-11-11",
         "image": {
@@ -201,6 +201,24 @@ stroke-linejoin="round" class="feather feather-home">
     <li><a href="#computer-vision">Computer Vision</a>
       <ul>
         <li><a href="#facial-recognition">Facial Recognition</a></li>
+        <li><a href="#optical-character-recognition-ocr">Optical Character Recognition (OCR)</a></li>
+      </ul>
+    </li>
+    <li><a href="#natural-language-processing-nlp">Natural Language Processing (NLP)</a>
+      <ul>
+        <li><a href="#text-analysis">Text Analysis</a></li>
+        <li><a href="#question-answering">Question Answering</a></li>
+        <li><a href="#conversational-language-understanding">Conversational Language Understanding</a></li>
+        <li><a href="#speech-analysis">Speech Analysis</a></li>
+        <li><a href="#translation">Translation</a></li>
+      </ul>
+    </li>
+    <li><a href="#document-intelligence">Document Intelligence</a></li>
+    <li><a href="#knowledge-mining">Knowledge Mining</a></li>
+    <li><a href="#generative-ai">Generative AI</a>
+      <ul>
+        <li><a href="#responsible-generative-ai">Responsible Generative AI</a></li>
+        <li><a href="#azure-ai-studio">Azure AI Studio</a></li>
       </ul>
     </li>
   </ul>
@@ -340,6 +358,23 @@ stroke-linejoin="round" class="feather feather-home">
 </ul>
 </blockquote>
 </details>
+<details>
+<summary>What is the Designer in Azure Machine Learning Studio?</summary>
+<blockquote>
+<p>Designer is a drag-and-drop UI for building ML pipelines (<a href="https://learn.microsoft.com/en-us/azure/machine-learning/concept-designer?view=azureml-api-2">source</a>). It is <a href="https://learn.microsoft.com/en-us/azure/machine-learning/concept-ml-pipelines?view=azureml-api-2#which-azure-pipeline-technology-should-i-use">primarily used by Data Scientists</a>, and allows you to use prebuit or custom components (letting you wrap your own code)</p>
+</blockquote>
+</details>
+<details>
+<summary>What are the steps, in order, for using Azure Machine Learning designer to train a machine learning model?</summary>
+<blockquote>
+<ol>
+<li>Create a dataset component</li>
+<li>Process the data with custom or prebuilt components</li>
+<li>Train the model</li>
+<li>Output the data into a sink</li>
+</ol>
+</blockquote>
+</details>
 <h3 id="fundamentals-of-azure-ai-services">Fundamentals of Azure AI services</h3>
 <details>
 <summary>How do Azure AI services improve speed-to-market for AI solutions?</summary>
@@ -367,6 +402,26 @@ stroke-linejoin="round" class="feather feather-home">
 <ul>
 <li>A <strong>single-service resource</strong> provides access to a single Azure service. This is a good strategy when you only need one Azure resource for a project or when you want to see cost information separately.</li>
 <li>A <strong>multi-service resource</strong> provides access to many Azure services with a single key and endpoint. With this strategy all services are billed together. This is helpful when you need several Azure services or are exploring capabilities.</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>What are the various Azure AI services, and what do they do?</summary>
+<blockquote>
+<p>From <a href="https://learn.microsoft.com/en-us/azure/ai-services/?view=doc-intel-3.1.0">Microsoft&rsquo;s documentation</a>:</p>
+<ul>
+<li>Azure OpenAI lets you perform a variety of NLP tasks using generative AI.</li>
+<li>Azure AI Search helps bring search and knowledge mining capabilities to applications.</li>
+<li>Azure AI Content Safety detects unwanted content.</li>
+<li>Azure AI Speech provides speech to text, text to speech, speech translation, and speaker recognition capabilities.</li>
+<li>Azure AI Document Intelligence helps with extracting text from and analyzing documents (PDFs)</li>
+<li>Azure AI Vision helps with analyzing content in images and vidoes</li>
+<li>Azure AI Custom Vision allows users to create custom image classification and object detection models</li>
+<li>Azure AI Face lets you detect and identify people and emotions from images</li>
+<li>Azure AI Translator helps with translation from text to text</li>
+<li>Azure AI Language is useful for NLP</li>
+<li>Azure AI Video Indexer analyzes videos</li>
+<li>Azure AI Immersive Reader helps people read and comprehend text</li>
 </ul>
 </blockquote>
 </details>
@@ -425,6 +480,18 @@ stroke-linejoin="round" class="feather feather-home">
 </ul>
 </blockquote>
 </details>
+<details>
+<summary>What domain-specific analysis does Azure AI Vision support?</summary>
+<blockquote>
+<p>Custom domain models are curated image classification models that help identify celebrities or landmarks (<a href="https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/concept-detecting-domain-content">source</a>)</p>
+</blockquote>
+</details>
+<details>
+<summary>What is Azure AI Custom Vision? How does it differ from Azure AI Vision?</summary>
+<blockquote>
+<p><a href="https://learn.microsoft.com/en-us/azure/ai-services/custom-vision-service/overview">Azure AI Custom Vision</a> is an extension of Azure AI Vision. It &ldquo;is an image recognition service that lets you build, deploy, and improve your own image identifier models.&rdquo; It supports image classification and object detection use cases. Azure AI Vision contains pre-built models for computer vision tasks. If you need to build your own custom image classification or object detection models, you would use Custom Vision.</p>
+</blockquote>
+</details>
 <h3 id="facial-recognition">Facial Recognition</h3>
 <details>
 <summary>What Azure AI services help with facial detection and analysis?</summary>
@@ -475,10 +542,530 @@ stroke-linejoin="round" class="feather feather-home">
 <p>Play with the service in Azure Vision Studio!</p>
 </blockquote>
 </details>
+<h3 id="optical-character-recognition-ocr">Optical Character Recognition (OCR)</h3>
 <details>
-<summary>Question</summary>
+<summary>Which service(s) is used for OCR tasks?</summary>
 <blockquote>
-<p>Answer</p>
+<p>Azure AI Vision and Vision Studio.</p>
+</blockquote>
+</details>
+<details>
+<summary>What text details are extracted from images with the Read API?</summary>
+<blockquote>
+<ul>
+<li>One object for each page of text, including page size and orientation.</li>
+<li>The lines of text on a page and their contents (including the bounding polygon)</li>
+<li>Each word in each line (including the bounding polygon)</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>Can you use Vision Studio for OCR in production applications?</summary>
+<blockquote>
+<p>No. Vision Studio is a playground for OCR use cases and experimentation. To build an app you will need to use the Azure AI Vision SDK or REST API.</p>
+</blockquote>
+</details>
+<h2 id="natural-language-processing-nlp">Natural Language Processing (NLP)</h2>
+<h3 id="text-analysis">Text Analysis</h3>
+<details>
+<summary>What is text analysis?</summary>
+<blockquote>
+<p>Text analysis is extracting information from unstructured text.</p>
+</blockquote>
+</details>
+<details>
+<summary>What Azure service helps with analyzing text? What features does it support?</summary>
+<blockquote>
+<p>Azure AI Language. It supports sentiment analysis, key phrase identification, text summarization, machine translation, and language understanding.</p>
+</blockquote>
+</details>
+<details>
+<summary>In what ways can text be cleaned before being input into NLP models?</summary>
+<blockquote>
+<ul>
+<li>It can be <strong>normalized</strong>, where punctuation is removed and all words are made lower case.</li>
+<li>Stop words (the, a, it) can be removed.</li>
+<li>Sentences can be split into <em>bi-grams</em> (2 word combinations) or <em>tri-grams</em> (3 word combinations) before analysis.</li>
+<li>Words can be <em>stemmed</em>, where words with similar roots (e.g., <em>power</em>, <em>powerful</em>) are considered the same token.</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>What is frequency analysis and when is it useful?</summary>
+<blockquote>
+<p>Frequency analysis counts the most frequently occurring tokens (single words or n-grams) in a text to extract its sentiment and meaning.</p>
+</blockquote>
+</details>
+<details>
+<summary>Why is removing stop words the first task in NLP statistical analysis?</summary>
+<blockquote>
+<p>Stop words appear in natural language quite often. Removing them before analysis ensures that such analysis is more likely to uncover insights into the content of the passage.</p>
+</blockquote>
+</details>
+<details>
+<summary>What NLP tasks can be presented as classification problems?</summary>
+<blockquote>
+<p>Determining the sentiment of text or mining an opinion.</p>
+</blockquote>
+</details>
+<details>
+<summary>How to language models use embeddings?</summary>
+<blockquote>
+<p>Embeddings represent tokens as vectors with many dimensions. Language models are trained with these embeddings to predict the next token in a text, which helps them understand word relationships.</p>
+</blockquote>
+</details>
+<details>
+<summary>What text analysis features does Azure AI Language support?</summary>
+<blockquote>
+<ul>
+<li>Named entity recognition (NER), which identifies people, places, events, etc. in text.</li>
+<li>Entity linking is like the above but links to Wikipedia!</li>
+<li>PII and PHI detection</li>
+<li>Language detection (e.g., <em>english</em> or <em>spanish</em>)</li>
+<li>Sentiment analysis</li>
+<li>Opinion mining</li>
+<li>Text summarization</li>
+<li>Key phrase extraction, which grabs the main concepts from unstructured text.</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>What does Azure AI Language return for language detection tasks? What if it can't determine the language?</summary>
+<blockquote>
+<p>It returns the language name (e.g., english), the ISO 6391 code (e.g., en), and a score from 0 to 1 reflecting its confidence. If it doesn&rsquo;t know the language, it will return unknown and the confidence will be NaN.</p>
+</blockquote>
+</details>
+<details>
+<summary>What does Azure AI Language return for sentiment analysis tasks?</summary>
+<blockquote>
+<p>It returns a softmax output with three potential classes: positive score, neutral score, and negative score. The sum of these scores will be 1.</p>
+</blockquote>
+</details>
+<details>
+<summary>What is a use case for key phrase extraction?</summary>
+<blockquote>
+<p>Grabbing the key terms from a body as text to suggest tags to make the document searchable!</p>
+</blockquote>
+</details>
+<details>
+<summary>What is the difference between key phrase extraction, named entity recognition (NER), and entity linking?</summary>
+<blockquote>
+<p>Key phrase extraction extracts the main concepts found in a body of text. NER identifies and categorizes entities (such as people, places, organizations, etc.) present in unstructured text. Entity linking is similar to NER, but it identifies entities and then provides links to relevant wikipedia articles.</p>
+</blockquote>
+</details>
+<details>
+<summary>How can you play with Azure AI Language capabilities?</summary>
+<blockquote>
+<p>With Language studio! To build production applications you should use the RestAPI or SDK.</p>
+</blockquote>
+</details>
+<h3 id="question-answering">Question Answering</h3>
+<details>
+<summary>For question answering tasks is it better to use the SDK/RestAPI or Language Studio?</summary>
+<blockquote>
+<p>Chatbots can be managed solely in Language Studio, so if you need a low-code solution it is a great way to develop your chatbot!</p>
+</blockquote>
+</details>
+<details>
+<summary>How are question answering projects put together with Azure AI Language service?</summary>
+<blockquote>
+<p>You setup a knowledge base–a list of questions and their answers–and Language Studio will take care of the rest. Behind the scenes an AI will process the question/answer pairs, and then you can test the project.</p>
+</blockquote>
+</details>
+<details>
+<summary>What is the easiest way to setup a question answering knowledge base?</summary>
+<blockquote>
+<p>Most companies already have an FAQ. Such documents can be directly imported into the Q&amp;A knowledge base.</p>
+</blockquote>
+</details>
+<h3 id="conversational-language-understanding">Conversational Language Understanding</h3>
+<details>
+<summary>What does a CLU application consist of?</summary>
+<blockquote>
+<p>Intents (verbs) and entities (nouns). They are trained on utterances. CLU models are trained to predict intents and entities from incoming utterances, even if the user input doesn&rsquo;t exactly match what is in the training data.</p>
+</blockquote>
+</details>
+<details>
+<summary>What is the None intent?</summary>
+<blockquote>
+<p>The none intent is a fallback. When the CLU application doesn&rsquo;t understand the goal of an utterance, it should respond with a generic response.</p>
+</blockquote>
+</details>
+<details>
+<summary>How do you author a CLU application in Azure?</summary>
+<blockquote>
+<p>Using the Azure AI Language and Language Studio you can define (give examples of) entities, intents, and utterances. Azure will take care of the rest. The Azure AI Language CLU feature includes pre-defined intents and entities for many common domains to help you get started.</p>
+</blockquote>
+</details>
+<details>
+<summary>How can you test and deploy a CLU application?</summary>
+<blockquote>
+<p>By submitting test utterances (those the model hasn&rsquo;t seen before) to a trained model and reviewing the predicted intents. When you are satisfied with the results you can deploy the model to an endpoint and begin consuming the resource.</p>
+</blockquote>
+</details>
+<h3 id="speech-analysis">Speech Analysis</h3>
+<details>
+<summary>What is speech recognition?</summary>
+<blockquote>
+<p>Speech recognition takes spoken language and transcribes it into text so it can be further analyzed and processed.</p>
+</blockquote>
+</details>
+<details>
+<summary>What models are typically involved in speech recognition?</summary>
+<blockquote>
+<p>An acoustic model to convert the audio into phonemes (specific sounds), and a language model that maps phonemes to words.</p>
+</blockquote>
+</details>
+<details>
+<summary>What features/capabilities does Azure AI Speech support?</summary>
+<blockquote>
+<ul>
+<li>Speech to text</li>
+<li>Text to speech (including creating custom voices)</li>
+<li>Speech translation</li>
+<li>Speech recognition (identifying different speakers)</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>What is the difference between real-time and batch transcription?</summary>
+<blockquote>
+<p>Real-time transcription occurs on live audio streams. Batch transcription takes place on stored audio recordings that happened in the past.</p>
+</blockquote>
+</details>
+<details>
+<summary>Which types of voices does the text to speech API support?</summary>
+<blockquote>
+<p>There are multiple pre-built voices from which you can select. You can also develop your own custom voices.</p>
+</blockquote>
+</details>
+<details>
+<summary>How can you interact with Azure AI Speech?</summary>
+<blockquote>
+<p>With Speech Studio, Azure AI Studio, the CLI, SDK, or Rest API.</p>
+</blockquote>
+</details>
+<h3 id="translation">Translation</h3>
+<details>
+<summary>What is the difference between literal and semantic translation? What are the challenges of each?</summary>
+<blockquote>
+<p>A literal translation attempts to translate each word into the corresponding word in the target language. Literal translations can fail when there isn&rsquo;t an equivalent word in the target language, or when a literal translation fails to capture the meaning of a phrase.</p>
+<p>Semantic translation focuses on the context and meaning of words or sentences. A combined approach of literal and semantic translation is best.</p>
+</blockquote>
+</details>
+<details>
+<summary>Compare text and speech translation.</summary>
+<blockquote>
+<p>Text translation is for written text and documents, while speech translation takes audio input (speech) and translates it either to audio in another language (speech-to-speech translation) or to text (speech-to-text translation).</p>
+</blockquote>
+</details>
+<details>
+<summary>Which Azure AI services support translation?</summary>
+<blockquote>
+<p>The Azure AI Translator supports text-to-text translation. Azure AI Speech supports speech to text and speech-to-speech translation.</p>
+</blockquote>
+</details>
+<details>
+<summary>How many languages does Azure AI Translator support?</summary>
+<blockquote>
+<p>Azure AI Translator supports more than 130 languages. It will translate text from one language to another or many languages at once.</p>
+</blockquote>
+</details>
+<details>
+<summary>How many languages does Azure AI Speech support?</summary>
+<blockquote>
+<p>Azure AI Speech supports more than 90 languages. It will translate speech from one language to another or many languages at once.</p>
+</blockquote>
+</details>
+<details>
+<summary>What useful configuration options does Azure AI Translator support?</summary>
+<blockquote>
+<ul>
+<li>Profanity filtering. By default profanity isn&rsquo;t filtered, but you can specify so that it is!</li>
+<li>Selective translation. You can specify brand names, words, or phrases that should not be translated.</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>What does Custom Translator offer in Azure AI Translator?</summary>
+<blockquote>
+<p>Custom Translator enables building customized neural machine translation systems. Custom translation models can be built in a no-code manner. These are helpful for domain-specific use cases where the out of the box translation models don&rsquo;t meet your needs. They do require a lot of data &hellip; about 10,000 translated sentences with your domain-specific language.</p>
+</blockquote>
+</details>
+<h2 id="document-intelligence">Document Intelligence</h2>
+<details>
+<summary>What is the difference between document intelligence and optical character recognition (OCR)?</summary>
+<blockquote>
+<p>OCR identifies text in images and outputs data in text format. Document intelligence automates the extracting, understanding, and saving of data within text.</p>
+</blockquote>
+</details>
+<details>
+<summary>What is document analysis?</summary>
+<blockquote>
+<p>Document analysis is the process of extracting the text, layout, and key-value pairs from a document. It provides bounding box locations on a page.</p>
+</blockquote>
+</details>
+<details>
+<summary>What types of models are available in Azure AI Document Intelligence?</summary>
+<blockquote>
+<p>There are prebuilt models that have been trained to process common document types like business cards, invoices, ID documents, receipts, etc. You can also train custom models.</p>
+</blockquote>
+</details>
+<details>
+<summary>What types of fields are recognized by pretrained document intelligence models?</summary>
+<blockquote>
+<ul>
+<li>Name, address and phone number</li>
+<li>Data and time</li>
+<li>Name, quantity, and price of purchased items</li>
+<li>Totals, subtotals, and tax values</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>What are the different types of documents for which there are prebuild document intelligence models?</summary>
+<blockquote>
+<ul>
+<li>Business cards</li>
+<li>Contracts</li>
+<li>Health Insurance Cards</li>
+<li>ID Cards</li>
+<li>Invoices</li>
+<li>Checks</li>
+<li>Bank Statements</li>
+<li>Invoices</li>
+<li>Receipts</li>
+<li>Tax Documents</li>
+<li>Mortgage Documents</li>
+<li>Marriage Certificates</li>
+<li>Credit Cards</li>
+</ul>
+</blockquote>
+</details>
+<h2 id="knowledge-mining">Knowledge Mining</h2>
+<details>
+<summary>What are some key features of Azure AI Search?</summary>
+<blockquote>
+<ul>
+<li>Source data – AI Search accepts JSON data from any source, and can turn data in many Azure storage services into searchable JSON.</li>
+<li>Supports vector search, full text (keyword) search, and hybrid search.</li>
+<li>Easily integrates with other Azure AI services to analyze and enrich raw text.</li>
+<li>Offers analysis for 56 languages.</li>
+<li>Supports a query syntax that can handle vector queries, text search, hybrid queries, fuzzy search, autocomplete, and geo-search.</li>
+<li>Scales to meet user needs without having to manage any infrastructure.</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>What are the key elements of an indexing pipeline?</summary>
+<blockquote>
+<ol>
+<li>Select a data source.</li>
+<li>The indexer ingests source data and outputs serialized JSON.</li>
+<li>The indexer opens files and extracts content (a process called document cracking).</li>
+<li>Enrich data via Azure AI services.</li>
+<li>Populate the search index</li>
+</ol>
+</blockquote>
+</details>
+<details>
+<summary>How does one interact with an Azure AI Search index?</summary>
+<blockquote>
+<p>Via an HTTP or REST API request. The response will come back as JSON.</p>
+</blockquote>
+</details>
+<details>
+<summary>What query syntax does Azure AI Search use?</summary>
+<blockquote>
+<p>Apache Lucene query syntax. Documentation for the query syntax can be found <a href="https://learn.microsoft.com/en-us/azure/search/query-odata-filter-orderby-syntax">here</a>.</p>
+</blockquote>
+</details>
+<h2 id="generative-ai">Generative AI</h2>
+<details>
+<summary>What different types of outputs can generative AI models support?</summary>
+<blockquote>
+<p>Text, images, videos, audio, and code.</p>
+</blockquote>
+</details>
+<details>
+<summary>What is the basic architecture of a transformer model?</summary>
+<blockquote>
+<p>An encoder block:</p>
+<ul>
+<li>creates semantic representations of the training data/vocabulary.</li>
+<li>determines relationships between tokens/words.</li>
+</ul>
+<p>The decoder block generates new language sequences.</p>
+</blockquote>
+</details>
+<details>
+<summary>What does the attention layer do in a transformer model?</summary>
+<blockquote>
+<p>Attention examines a sequence of tokens to quantify the strength of the relationships between them. Self attention considers how other tokens around one particular token influences that token&rsquo;s meaning.</p>
+<p>In an encoder block, the attention layer will examine each token in context. A single token might have multiple vector embeddings if it has different contexts. (E.g., the word <em>tie</em> can mean many different things).</p>
+<p>In a decoder block, attention layers help predict the next token in a sequence. It keeps track the sequence of tokens up to the current point and considers which tokens are most influential when considering what the next token should be.</p>
+</blockquote>
+</details>
+<details>
+<summary>What is multi-head attention?</summary>
+<blockquote>
+<p>Multi-head attention uses different elements in the embeddings to determine multiple possible next tokens.</p>
+</blockquote>
+</details>
+<details>
+<summary>What is the advantage of using an existing foundation model (like ChatGPT) instead of training your own LLM from scratch?</summary>
+<blockquote>
+<p>Training foundation models requires an enormous amount of training data and compute resources, making it unfeasible for many organizations. Also, foundation models are already quite capable for a variety of tasks.</p>
+</blockquote>
+</details>
+<details>
+<summary>What are the core differences between LLMs and SLMs (small language models)?</summary>
+<blockquote>
+<ul>
+<li>LLMs are typically trained on larger, more general text datasets.</li>
+<li>LLMs have many billions of parameters and require more memory.</li>
+<li>SLMs typically have a more focused vocabulary and use cases.</li>
+<li>SLMs are easier to deploy at the edge/locally.</li>
+<li>SLMs have quicker inference times.</li>
+<li>LLMs take longer and more compute power to fine-tune.</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>What are copilots?</summary>
+<blockquote>
+<p>Digital generative AI assistants that are integrated into applications. They provide contextualized support for commons tasks in those applications.</p>
+</blockquote>
+</details>
+<details>
+<summary>What are the three levels of leveraging copilots?</summary>
+<blockquote>
+<ul>
+<li>Off-the-shelf copilots, such as Microsoft Copilot for Microsoft 365, can be used to help Microsoft users.</li>
+<li>Microsoft Copilot can be extended with proprietary data to support custom business processes or tasks.</li>
+<li>You can build completely custom copilots!</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>What are five aspects of prompting to improve a copilot's responses?</summary>
+<blockquote>
+<ol>
+<li>Give a specific goal for what we want the copilot to do</li>
+<li>Provide a data source to ground the response</li>
+<li>Add context</li>
+<li>Set clear expectations for the output</li>
+<li>Iterate and experiment!</li>
+</ol>
+</blockquote>
+</details>
+<details>
+<summary>What is the difference between Azure AI Studio and Copilot Studio?</summary>
+<blockquote>
+<p>Copilot Studio is a low-code development environment for business users to create copilots. Deployed copilots will be hosted in Microsoft 365. Azure AI Studio is for professional developers to define prompt flows, do prompt engineering, and integrate proprietary data in to generative AI applications and custom copilots to be used in proprietary apps.</p>
+</blockquote>
+</details>
+<h3 id="responsible-generative-ai">Responsible Generative AI</h3>
+<details>
+<summary>What are the four recommended actions to ensure generative AI applications follow best practices for responsible AI?</summary>
+<blockquote>
+<ol>
+<li>Identify potential harms.</li>
+<li>Measure the presence of these harms in the application&rsquo;s outputs.</li>
+<li>Mitigate these harms at <em>every possible layer</em>. Transparently communicate potential risks to end users.</li>
+<li>Develop and follow a deployment and operational readiness plan.</li>
+</ol>
+</blockquote>
+</details>
+<details>
+<summary>What potential harms are relevant to generative AI applications?</summary>
+<blockquote>
+<p>Generative AI applications can generate content that:</p>
+<ul>
+<li>is offensive and discriminatory</li>
+<li>is factually inaccurate</li>
+<li>encourages illegal/unethical behavior</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>What are four steps in the harm identification process?</summary>
+<blockquote>
+<ol>
+<li>Specifically identify potential harms that can be output</li>
+<li>Prioritize measurement for the highest priority harms</li>
+<li>Test and verify the presence of these harms in model output</li>
+<li>Document and share detail of these harms with internal stakeholders. Update the list of prioritized harms as needed.</li>
+</ol>
+</blockquote>
+</details>
+<details>
+<summary>How can you measure the presence of potential harms in model output at scale?</summary>
+<blockquote>
+<p>With the help of additional models! You can have a model classify output as harmful before it is displayed to the end user. You can define addition categories (e.g., toxicity). You should manually spot check content as well.</p>
+</blockquote>
+</details>
+<details>
+<summary>What are some layers in an AI system where harm can be mitigated?</summary>
+<blockquote>
+<ol>
+<li>At the model layer &hellip; selecting the appropriate model for the task at hand will help mitigate harm. You can also fine tune the model to keep its generated content more relevant to the task at hand.</li>
+<li>By using a safety system. For example, Azure OpenAI has built-in content filters that can flag content that is hateful, sexual, violent, or self-harming.</li>
+<li>The prompt layer. You can add context (e.g., with RAG) to the prompt to ground the model&rsquo;s response. You can also give the model explicit instructions on what to do with given inputs or what type of information it can output.</li>
+<li>The UX layer. We can validated user input/output in the web application itself.</li>
+</ol>
+</blockquote>
+</details>
+<details>
+<summary>What are components of a proper release and deployment plan?</summary>
+<blockquote>
+<ul>
+<li>It should include a phased delivery where it is first release to a restricted group of users for testing and feedback.</li>
+<li>Have an incident response plan and rollback plan if there are issues.</li>
+<li>Implement the capability to immediately block harmful content if it is discovered.</li>
+<li>Implement the capability to immediately block specific users/IP addresses if they are misusing the application.</li>
+<li>Allow users to provide feedback and flag harmful or inappropriate content.</li>
+<li>Track user satisfaction.</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>What features does Azure AI content filters provide?</summary>
+<blockquote>
+<ul>
+<li>Prompt shields scans for user input attacks.</li>
+<li>Groundedness detection ensures model output is grounded in source content</li>
+<li>Protected material detection looks for copyrighted content</li>
+<li>And you can define custom categories!</li>
+</ul>
+</blockquote>
+</details>
+<h3 id="azure-ai-studio">Azure AI Studio</h3>
+<details>
+<summary>What are some key features of Azure AI Studio?</summary>
+<blockquote>
+<ul>
+<li>The model catalog</li>
+<li>Prompt flow development</li>
+<li>Azure OpenAI service for generative AI model testing and deployment</li>
+<li>Integration with other Azure AI services for speech, vision, language, and document intelligence</li>
+<li>Build RAG applications</li>
+<li>Chat playground</li>
+<li>Scalable compute</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>In what use cases or scenarios should you use Azure AI Studio?</summary>
+<blockquote>
+<p>When you need to:</p>
+<ul>
+<li>Create and manage AI projects!</li>
+<li>Develop generative AI applications</li>
+<li>Explore available AI models</li>
+<li>Build RAG applications</li>
+<li>Monitor and evaluate AI models</li>
+</ul>
 </blockquote>
 </details>
 
