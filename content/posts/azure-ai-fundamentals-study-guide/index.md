@@ -216,7 +216,7 @@ Below are questions to know the answer to pass the [Azure AI Fundamentals (AI-90
 > - Semantic segmentation (hardest) – individual pixels are classified according to the object to which they belong.
 > - Image analysis – generating a text caption for an image.
 > - Facial detection and recognition – detecting and identifying faces in an image.
-> – Optical character recognition (OCR) – detect and extract text in images.
+> - Optical character recognition (OCR) – detect and extract text in images.
 
 </details>
 
@@ -249,7 +249,7 @@ Below are questions to know the answer to pass the [Azure AI Fundamentals (AI-90
 <details>
 <summary>What domain-specific analysis does Azure AI Vision support?</summary>
 
-> Custom domain models are curated image classification models that help identify celebrities or landmarks ([source](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/concept-detecting-domain-content))
+> Custom domain models are curated image classification models that help identify celebrities or landmarks ([source](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/concept-detecting-domain-content)).
 
 </details>
 
