@@ -383,7 +383,7 @@ Below are questions to know the answer to pass the [Azure AI Fundamentals (AI-90
 </details>
 
 <details>
-<summary>How to language models use embeddings?</summary>
+<summary>How do language models use embeddings?</summary>
 
 > Embeddings represent tokens as vectors with many dimensions. Language models are trained with these embeddings to predict the next token in a text, which helps them understand word relationships.
 
