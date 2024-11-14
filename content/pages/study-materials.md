@@ -27,3 +27,4 @@ own, so that you may learn 🙏.
 ## Certification study guides
 
 * [Azure AI Fundamentals](posts/azure-ai-fundamentals-study-guide/)
+* [Azure AI Engineer](posts/azure-ai-engineer-study-guide/)
