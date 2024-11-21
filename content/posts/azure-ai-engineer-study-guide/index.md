@@ -186,6 +186,87 @@ Below are questions to know the answer to pass the [Azure AI Engineer (AI-102)](
 </details>
 
 <details>
+<summary>What does Azure Monitor automatically track for AI services?</summary>
+
+> * Endpoint requests
+> * Data submitted
+> * Data returned
+> * Errors
+
+</details>
+
+<details>
+<summary>By default where can you view metrics related to a resource?</summary>
+
+> Metrics can be viewed for an individual resource on that resource's _Metrics_ page. You can create charts of different aggregation levels and add them to the _Metrics_ page.
+
+</details>
+
+<details>
+<summary>How can you view metrics for multiple resources at once?</summary>
+
+> Create a dashboard in the Azure portal. You can have up to 100 named dashboards, in which you can add metrics from multiple resources.
+
+</details>
+
+<details>
+<summary>What service allows you to log information about your resources and applications? How can you view and analyze logged data?</summary>
+
+> You can log information with diagnostic logging. Typically logs get sent to Azure Event Hub for storage, and then you can access and analyze these events in Azure Log Analytics. You can also send older log data to Azure Storage for archiving and occasional retrieval.
+
+</details>
+
+<details>
+<summary>When setting up diagnostic logs, what attributes do you need to specify?</summary>
+
+> * A name for the settings.
+> * The categories of event data that you want to capture.
+> * Retention policy for the logged data.
+> * Details of the destinations for the data.
+
+</details>
+
+<details>
+<summary>For setting up diagnostic logging, where can I find more details?</summary>
+
+> At the [Azure diagnostic logging](https://learn.microsoft.com/en-us/azure/ai-services/diagnostic-logging) page.
+
+</details>
+
+<details>
+<summary>How long does it take after logging setup before data can be viewed and queried in Azure Log Analytics?</summary>
+
+> About one hour.
+
+</details>
+
+### Containerizing Azure AI Services
+
+<details>
+<summary>Why might you want to deploy an Azure AI service on prem?</summary>
+
+> * To keep sensitive data on the same network without sending it to the cloud.
+> * To reduce latency between the AI service and the local data.
+
+</details>
+
+<details>
+<summary>What is a container? Why are they useful?</summary>
+
+> A container comprises an application and the runtime components needed to run it. Containers are great because they are portable across hosts, meaning they can be run on many different types of operating systems or hardware. Also, a single host can support running multiple containers at once.
+
+</details>
+
+<details>
+<summary>What are commong ways of deploying a container?</summary>
+
+> Deploy it locally or on a private network that is running a Docker server.
+> Deploying on an Azure Container Instance.
+> Deploying on an Azure Kubernetes Cluster.
+
+</details>
+
+<details>
 <summary>Placeholder question</summary>
 
 > Answer
