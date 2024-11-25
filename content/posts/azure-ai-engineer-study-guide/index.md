@@ -267,6 +267,131 @@ Below are questions to know the answer to pass the [Azure AI Engineer (AI-102)](
 </details>
 
 <details>
+<summary>What is the process of hosting an AI Service container locally? How is does Azure take care of billing?</summary>
+
+> 1. Find and download the container image for the service you need from Microsoft Container Registry.
+> 2. Run the container (it will host endpoints) and use it as you would use the service on the cloud.
+> 3. Periodically utilization metrics will be sent to Azure AI Services for billing purposes.
+
+</details>
+
+<details>
+<summary>What details must be passed when deploying an Azure AI Service container?</summary>
+
+> 1. An API Key for billing purposes.
+> 2. The URI endpoint (for billing).
+> 3. A value of "Accept" for the EULA.
+
+</details>
+
+### Azure AI Content Safety
+
+<details>
+<summary>What is Azure AI Content Safety?</summary>
+
+> An Azure AI service designed to make it easy to include advanced content safety capabilities into applications.
+
+</details>
+
+<details>
+<summary>What are four drivers of the need for online content safety?</summary>
+
+> 1. Human- and AI-generated content continues to exponentiall increase online, including harmful content.
+> 2. There is growing regulatory pressure to regulate online content.
+> 3. Users need transparency in content moderation standards and enforcement.
+> 4. Content is increasingly more complex (i.e. multi-modal).
+
+</details>
+
+<details>
+<summary>How can you easily play with Content Safety features?</summary>
+
+> In Azure AI Foundry! Content Safety is a tab in the application.
+
+</details>
+
+<details>
+<summary>What are some features of Content Safety?</summary>
+
+> With Content Safety you can:
+> * moderate text content
+> * detect hallucinated content from LLMs
+> * identify protected (i.e. copyrighted) material in LLM output
+> * implement prompt shields (guard against jailbreak and indirect attacks)
+> * moderate image content
+> * customize your own content filtering
+
+</details>
+
+<details>
+<summary>In what four categories does Content Safety classify content?</summary>
+
+> It can classify content as including hate, sexual, self-harm, or violent.
+
+</details>
+
+<details>
+<summary>What are the severity levels for each category?</summary>
+
+> For text moderation, each class is given an integer from 0 (no risk) to 6 (high, urgent risk). For image moderation each class is given a score of safe, low, or high.
+
+</details>
+
+<details>
+<summary>What do specified thresholds accomplish for content moderation tasks?</summary>
+
+> The threshold level determines what content is automatically allowed in an application. For example, if an image content moderation threshold is set at "medium", and someone submits an image that has a "high" rating on any of the four categories, that image won't be allowed.
+
+</details>
+
+<details>
+<summary>What are limitations of content safety?</summary>
+
+> Content safety depends on AI algorithms, and they aren't perfect. To ensure they are working as good as possible, the algorithms should be evaluated (using classification metrics such as precision, recall, and F1 score). We might want to prioritize recall to avoid false negatives!
+
+</details>
+
+<details>
+<summary>Even though content safety isn't perfect, what is a main advantage of using it?</summary>
+
+> A primary advantage is its scale. It can check all incoming content and flag content that needs further moderation from humans.
+
+</details>
+
+## Azure AI Vision
+
+### Image Analysis
+
+<details>
+<summary>What is image analysis?</summary>
+
+> Image analysis is all about extracting information from images.
+
+</details>
+
+<details>
+<summary>What different image analysis tasks can you accomplish with Azure AI Vision?</summary>
+
+> * DenseCaptions – Developing a caption for an image
+> * Tags – Identifying tags that are fitting for an image
+> * Detecting people and objects in images
+> * Determining the format and size of an image
+> * Classifying an image, and determining if it contains known celebrities and/or landmarks
+> * Detecting and removing the background of an image.
+> * Image moderation ... determining if an image contains adult or violent content.
+> * Optical character recognition (OCR)
+> * Smart thumbnail generation, which looks at what part of an image would be best for a thumbnail, then generates a thumbnail from that image.
+
+</details>
+
+<details>
+<summary>Generally how does the AI Vision API or SDK work?</summary>
+
+> You make a call to Azure AI Vision, including the image to analyze and the visual features to include in the analysis (one or many of the tasks AI Vision can handle).
+
+</details>
+
+<details>
 <summary>Placeholder question</summary>
 
 > Answer
