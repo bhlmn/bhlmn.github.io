@@ -391,6 +391,148 @@ Below are questions to know the answer to pass the [Azure AI Engineer (AI-102)](
 
 </details>
 
+### Azure AI Custom Vision
+
+<details>
+<summary>What three types of custom Azure AI Vision models are there?</summary>
+
+> * Image classification models (multi-class or multi-label)
+> * Object detection models
+> * Product recognition models (object detection, but specifically trained for product labels and brand names)
+
+</details>
+
+<details>
+<summary>What are the core components/steps of a custom vision project?</summary>
+
+> * Create a blob storage container and upload the training images.
+> * Create a dataset, specifying what type of custom vision project it is.
+> * Label the data, which creates a COCO file.
+> * Connect the COCO file to the images in the dataset.
+> * Training the model (specify model type and training budget)
+> * Evaluate performance and make predictions!
+
+</details>
+
+<details>
+<summary>What is a COCO file and what are its key attributes?</summary>
+
+> A COCO file is a JSON file with a specific format:
+> * the _images_ attribute defines the location of images in blob storage and has the file name, width, height, etc.
+> * the _annotations_ attribute defines the classifications (or objects) for the image and the bounding box/area for the classification (in the case of object detection)
+> * the _categories_ attribute defines the classification categories
+
+</details>
+
+<details>
+<summary>What Azure service allows you to label training images?</summary>
+
+> Azure Machine Learning studio! You can use it to create a _Data Labeling project_
+
+</details>
+
+<details>
+<summary>What is the training budget?</summary>
+
+> An upper bound of time for how long the training will run.
+
+</details>
+
+<details>
+<summary>How many images per class do you need to train a custom image classification model?</summary>
+
+> At least 3-5 per class/label, but the more the better!
+
+</details>
+
+<details>
+<summary>How can you access your custom image model after it has been trained?</summary>
+
+> Through APIs or in Vision Studio.
+
+</details>
+
+<details>
+<summary>What resources need provisioned to train and serve a Custom Vision model?</summary>
+
+> * An Azure AI multi-service resource will take care of both training and prediction, or ...
+> * An Azure AI Custom Vision training resource and a ...
+> * Azure AI Custom Vision prediction resource
+
+</details>
+
+### Object detection
+
+<details>
+<summary>What are the two core components in object detection prediction?</summary>
+
+> 1. The class label of each object in the image.
+> 2. The location of each object in the image, represented as coordinates of a bounding box that encloses the object.
+
+</details>
+
+<details>
+<summary>What services can you use for labeling images for object detection?</summary>
+
+> * The Azure AI Custom Vision portal
+> * Azure Machine Learning Studio Data Labeler
+> * Microsoft Visual Object Tagging Tool (VOTT)
+
+</details>
+
+<details>
+<summary>How are the bounding box values expressed?</summary>
+
+> They are expressed by four values, each represents a proportional value relative to the image size
+> * _left_ – the left coordinate of the bounding box
+> * _top_ – the top coordinate of the bounding box
+> * _width_ – the percentage of the image that the object's width takes
+> * _height_ – the percentage of the image that the object's height takes
+
+</details>
+
+<details>
+<summary>If you want to use the smart labeler, what do you have to do first?</summary>
+
+> Tag some images with objects of each class and train an initial object detection model.
+
+</details>
+
+### Facial analysis, detection, and recognition
+
+<details>
+<summary>What are common tasks when it comes to facial detection?</summary>
+
+> * Detect when a person is present
+> * Identify a person's facial location
+> * Recognize individuals
+
+</details>
+
+<details>
+<summary>What two services provide facial detection capabilities?</summary>
+
+> * Azure AI Vision can detect people in an image and will return a bounding box for the location of a face.
+> * The Face service is best suited for the task and offers comprehensive facial analysis capabilities.
+
+</details>
+
+<details>
+<summary>What are key considerations for facial analysis software when it comes to responsible AI?</summary>
+
+> * Data privacy and security – facially data is PII!
+> * Transparency – need to make sure users know how their facial data is used and who will be able to access it.
+> * Fair and inclusive – need to ensure the AI system isn't used in a manner that is prejudiced or unfairly targets individuals.
+
+</details>
+
+<details>
+<summary>If a person is detected using the Analyze Image function of the Azure AI Vision service, what attributes will be returned in the API response?</summary>
+
+> There is a `peopleResult` attribute returned by the API. It will return a list of bounding boxes for each person detected and how confident it is about its prediction.
+
+</details>
+
 <details>
 <summary>Placeholder question</summary>
 
