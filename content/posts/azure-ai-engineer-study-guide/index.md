@@ -534,6 +534,204 @@ Below are questions to know the answer to pass the [Azure AI Engineer (AI-102)](
 </details>
 
 <details>
+<summary>What capabilities does the Face service provide?</summary>
+
+> * Face detection
+> * Face attribute analysis (head pose, glasses, blur, exposure, noise, occlusion, face accessories, quality for recognition)
+> * Facial landmark location (eye corners, pupils, tips of nose, etc.)
+> * Face comparison (compare faces across many images for similarity)
+> * Face verification (see if a face in one image is the same one in another)
+> * Facial recognition (identify specific individuals)
+> * Facial liveness (determine if a video stream is real or fake)
+
+</details>
+
+<details>
+<summary>Which Face service features require approval through a Limited Access policy? Why?</summary>
+
+> Facial recognition, comparison, and verification since those services are rich with PII.
+
+</details>
+
+<details>
+<summary>How does facial comparison/verification work? Do these features preserve anonymity?</summary>
+
+> When a face is detected, a GUID is assigned to the face and retained (cached) for 24 hours. Subsequent images can be compared to the cached data to determine if they are similar (comparison) or the same person (verification).
+> 
+> The way this works allows for comparison/verification anonymously, since the identity of the person doesn't actually need to be known.
+
+</details>
+
+<details>
+<summary>How is facial recognition implemented?</summary>
+
+> In facial recognition, you create a person group (e.g., employees, or family members, etc.), you add examples of each person to this group (ideally in multiple poses), and identify/label each person. Then you train. The identities of these individuals persist.
+
+</details>
+
+<details>
+<summary>What can you do with a trained facial recognition model?</summary>
+
+> A trained facial recognition model is stored in a Face/Azure AI service resource. It can be used to:
+> * Identify individuals in images
+> * Verify the identity of a detected face
+> * Analyze images to find faces that are similar to known faces.
+
+</details>
+
+### Optical Character Recognition
+
+<details>
+<summary>What two Azure services are helpful for extracting text from images and documents?</summary>
+
+> * Image Analysis (OCR) in Azure AI VIsion is great for extracting text from images and handwritten notes.
+> * Document Intelligence extracts text from PDFs and documents that are more orderly (e.g., receipts, invoices)
+
+</details>
+
+<details>
+<summary>What visual feature needs to be specified when calling Image Analysis for an OCR task? What is returned?</summary>
+
+> You need to pass `VisualFeatures.READ`. In the response you will get an object for each line of text in the provided image. Within each object will be the text it found, the bounding polygon (x/y coordinates), and the confidence of the word extracted.
+
+</details>
+
+### Analyzing Video
+
+<details>
+<summary>What are features of Azure Video Indexer?</summary>
+
+> Video Indexer is your one-stop-shop for extracting information from videos. It can do:
+> * Facial recognition for people in the video
+> * OCR for text in the video
+> * Speech transcription for the video's audio
+> * Topics – identify key topics for the video
+> * Sentiment analysis on themes in the video
+> * Labels – identify tags for the video
+> * Moderate adult, harmful, or violent themes in the video
+> * Segment the video into individual themes
+
+</details>
+
+<details>
+<summary>What custom models can you train to extend Video Indexer's capabilities?</summary>
+
+> * You can train the model to recognize certain people in the video, such as employees!
+> * Domain specific language models can be trained to detect and transcribe this niche language.
+> * Detect specific brands, products, companies, etc.
+
+</details>
+
+<details>
+<summary>What are the two ways you can integrate Video Indexer into applications?</summary>
+
+> * You can embed a Video Indexer widget onto your website!
+> * You can use the Video Indexer API
+
+</details>
+
+<details>
+<summary>Before you analyze a video with Video Indexer, what do you need to do first?</summary>
+
+> You need to ulpoad the video to Azure Video Indexer and index it!
+
+</details>
+
+## Natural Language Processing
+
+### Azure AI Language
+
+<details>
+<summary>What features does Azure AI Language provide?</summary>
+
+> * Language detection for a passage of text
+> * Key phrase extraction – pulling out important words and phrases from text
+> * Sentiment analysis
+> * Named entity recognition (NER) – detecting references to people, locations, time periods, organizations, etc.
+> * Entity linking – identify specific entities and the link to appropriate Wikipedia articles
+
+</details>
+
+<details>
+<summary>When making a call to Azure AI Language for language detection, what do you provide in the request and what is the response?</summary>
+
+> You provide a list of passages of text (documents) and an identifier for each passage. The service responds with an object that provides an identified language for each passage and a confidence score from 0 to 1.
+
+</details>
+
+<details>
+<summary>What will Azure AI Language do if submit a single passage that contains multiple languages?</summary>
+
+> It will try and detect the dominant language in the passage. It only returns one language classification per passage.
+
+</details>
+
+<details>
+<summary>If Azure AI Language can't determine the language of a passage, what classification is returned?</summary>
+
+> It will return `(Unknown)` and a confidence score of 0.0.
+
+</details>
+
+<details>
+<summary>When making a call to Azure AI Language for key phrase extraction, what do you provide in the request and what is the response?</summary>
+
+> The request includes a list of passages and their language. In the response there will be a `keyPhrases` object, which is a list of strings, one entry per key phrase.
+
+</details>
+
+<details>
+<summary>How does the sentiment analysis feature respond to an API call?</summary>
+
+> It responds with the sentiment (negative, neutral, or positive) for each sentence in the passage. It also gives confidence scores for each classification for each sentence. It also provides an overall sentiment and confidence scores for the entire passage based on the scores of the individual sentences.
+
+</details>
+
+<details>
+<summary>How does the entity recognition feature respond?</summary>
+
+> For each passage provided, it will give a list of entities. For each entity it returns an object that specifies the entity name, category, location, and confidence score for its classification.
+
+</details>
+
+<details>
+<summary>What is returned by the entity linking feature?</summary>
+
+> For each passage it gives the name of the entity, its location within the text, a confidence score for the entity identification, and the wikipedia URL for the matched entity.
+
+</details>
+
+<details>
+<summary>How does entity linking handle ambiguous entities? For example, people with the same name as cities?</summary>
+
+> The entity linking service can handle ambiguous entities automatically.
+
+</details>
+
+<details>
+<summary>How does question answering differ from a conversational language understanding task?</summary>
+
+> In question answering, a user submits a question and an answer is returned. NLP is used to help accomplish the task. In conversational language understanding, a user submits an utterance (can be a question), but they expect an action to be performed (e.g., Hey Siri, play Imagine Dragons on Spotify)
+
+</details>
+
+<details>
+<summary>What are data sources that can be used to populate a QA knowledge base?</summary>
+
+> * An FAQ document or a URL that contains an FAQ.
+> * Files containing text from which questions and answers can be extracted.
+> * QA chat sessoins that include common questions and answers.
+
+</details>
+
+<details>
+<summary>What are multi-turn responses, and how can you implement them in the question answering feature of AI Language?</summary>
+
+> A multi-turn response is one in which follow-up questions might be need in order to provide the correct answer. When setting up your knowledge based you can specify follow up prompts.
+
+</details>
+
+<details>
 <summary>Placeholder question</summary>
 
 > Answer
