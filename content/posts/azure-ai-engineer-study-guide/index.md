@@ -708,6 +708,8 @@ Below are questions to know the answer to pass the [Azure AI Engineer (AI-102)](
 
 </details>
 
+### Question Answering systems
+
 <details>
 <summary>How does question answering differ from a conversational language understanding task?</summary>
 
@@ -728,6 +730,171 @@ Below are questions to know the answer to pass the [Azure AI Engineer (AI-102)](
 <summary>What are multi-turn responses, and how can you implement them in the question answering feature of AI Language?</summary>
 
 > A multi-turn response is one in which follow-up questions might be need in order to provide the correct answer. When setting up your knowledge based you can specify follow up prompts.
+
+</details>
+
+<details>
+<summary>What attributes are sent in a request to the knowledge base API?</summary>
+
+> * The `question` that needs answered.
+> * `top`, the number of answers to be returned
+> * A `scoreThreshold` for the answers that can be returned.
+> * `strictFilters` to limit the response to answers that contain certain metadata.
+
+</details>
+
+<details>
+<summary>What is returned in the knowledge base API's response?</summary>
+
+> * A score for the percieved quality of the answer.
+> * The answer
+> * The question in the knowledge base that is associated with the answer.
+> * Metadata attached to the answer.
+
+</details>
+
+<details>
+<summary>How can you improve question answering performance?</summary>
+
+> Through active learning and defining synonyms.
+> * Active learning, enabled by default, suggests related phrasing for the questions you have in your QA database. Including these related phrases can improve the odds of a good answer match.
+> * Defining synonyms means providing synonyms to keywords in your questions and answers to improve the likelihood of a good match.
+
+</details>
+
+### Conversational Language Understanding
+
+<details>
+<summary>What is a common design pattern for a natural language understanding solution?</summary>
+
+> 1. A user inputs natural language into an application.
+> 2. A language model determines the user's intent.
+> 3. The app performs an appropriate action
+
+</details>
+
+<details>
+<summary>What is the difference between pre-built and learned features of Azure AI Language? What are the examples of learned features?</summary>
+
+> Pre-built features require no custom data, but learned features do and enable you to train your own custom models.
+> 
+> Azure AI Language learned features are:
+> * Conversational language understanding
+> * Custom named entity recognition
+> * Custom text classification
+> * Question answering
+
+</details>
+
+<details>
+<summary>When providing a training set of utterances, what guidelines will help improve performance?</summary>
+
+> * Provide a lot of alternative ways of saying the same thing.
+> * Vary the length of utterances (short, medium, and long examples)
+> * Vary where the noun or subject of the utterance is in the sentance (beginning, middle, and end).
+> * Give examples with correct and incorrect grammar.
+> * Give a lot of examples for each intent.
+
+</details>
+
+<details>
+<summary>When labeling data for CLU applications, what are three key factors to improve performance?</summary>
+
+> * Be precise in your labeling. Label each entity to its right type, and only include what you want extracted.
+> * Be consistent in your labeling across examples.
+> * Label completely – label all the instance of an entity in all the utterances.
+
+</details>
+
+<details>
+<summary>What is the role of entities in CLU tasks? What key types of entities are there?</summary>
+
+> Entities add context to user intents. For example, "turn the fan on" and "turn the light on" share the same intent, but only the entity differs.
+> 
+> The three key types of entities are:
+> * A learned entity is most common, which is when you define a component and associate words and phrases with it in training data.
+> * List entities include a specific set of possible values (think days of the week).
+> * Prebuilt entities include numbers, datetimes, and names.
+
+</details>
+
+<details>
+<summary>What prebuilt entities does Azure AI Language support out of the box?</summary>
+
+> Age
+> Number
+> Percentage
+> Dimensions
+> Temperature
+> Currency
+> Number ranges
+> Datetimes
+> Names
+> Email addresses
+> Phone numbers
+> URLs
+> Companies and corporations
+> Locations (cities, states, countries)
+> IP addresses
+
+</details>
+
+<details>
+<summary>What four step process can you iterate through to build a CLU model?</summary>
+
+> 1. Train a model to learn intents and entities from example utterances.
+> 2. Test the model interactively or useing a test dataset.
+> 3. Deploy the model for use.
+> 4. Review the performance of your model so you can include more training data and improve it.
+
+</details>
+
+### Text Classification
+
+<details>
+<summary>What types of text classification projects are there?</summary>
+
+> There is single class classification (assigning one label to a body of text) or multi-class classification (assigning one or more labels to a body of text).
+
+</details>
+
+<details>
+<summary>Why is improving multi-class classifiaction model performance more difficult than single-class?</summary>
+
+> When performance is poor that means you need more training data specific to the classes your model is having a hard time predicting. For multi-label projects finding quality data is hard due to the different combinations of labels that can be assigned.
+
+</details>
+
+### Custom NER
+
+<details>
+<summary>When might you build a custom NER solution?</summary>
+
+> If the entities you want to extract aren't part of the built-in service _or_ if you only want to extract specific entities.
+
+</details>
+
+<details>
+<summary>What considerations should you make to boost performance of a custom NER solution?</summary>
+
+> It's all about the data! Get training data that is:
+> * Representative of what the model will see in the real world.
+> * Use as diverse data as you can (including document types) that matches the distribution it will see in the wild.
+> * Keep your entities as distinct as possible (not always easy or practical).
+
+</details>
+
+<details>
+<summary>How many entity types can you define for the model to recognize?</summary>
+
+> Up to 200 entity types!
+
+</details>
+
+<details>
+<summary>What is the best way to label NER training data?</summary>
+
+> Using Azure Language Studio!
 
 </details>
 
