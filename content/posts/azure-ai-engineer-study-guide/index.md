@@ -1,6 +1,6 @@
 +++
 title = "Azure AI Engineer Study Guide"
-date = 2024-11-14T12:22:00-07:00
+date = 2024-12-09T12:22:00-07:00
 draft = false
 +++
 
@@ -897,6 +897,237 @@ Below are questions to know the answer to pass the [Azure AI Engineer (AI-102)](
 > Using Azure Language Studio!
 
 </details>
+
+### Translation
+
+<details>
+<summary>Azure AI Translator supports translation between how many supported languages?</summary>
+
+> 90!
+
+</details>
+
+<details>
+<summary>What translation tasks can you use Azure AI Translation for?</summary>
+
+> * Language detection
+> * One-to-one translation
+> * One-to-many translation
+> * Transliteration, which is the process of converting written text from one writing system (script) to another.
+
+</details>
+
+<details>
+<summary>What kinds of resource must be provisioned to use Azure AI Translator?</summary>
+
+> Either a single-service Azure AI Translator resource, or the Text Analytics API in a multi-service AI Service resource.
+
+</details>
+
+<details>
+<summary>When hitting the `detect` function of the translator API, what is returned?</summary>
+
+> * The detected language for the input text.
+> * The confidence score for the detection.
+> * Whether translation is supported.
+> * Whether transliteration is supported.
+
+</details>
+
+<details>
+<summary>When hitting the `translate` endpoint, what must you provide?</summary>
+
+> * The text to translate.
+> * The language to translate _from_.
+> * The language (s) to translate to.
+
+</details>
+
+<details>
+<summary>When using the `transliterate` endpoint, what must you provide?</summary>
+
+> * The text to transliterate.
+> * The input script.
+> * The desired output script.
+
+</details>
+
+<details>
+<summary>What does the word alignment parameter do in the `translate` endpoint when set to true?</summary>
+
+> It will provide a numerical mapping of how the characters in the input text relate to the characters in the output text. For example, "Good morning" to "Buenos diás" would show 0:3-0:5 5:11-7:10 to show that "good" maps to "buenos" and "morning" maps to "diás".
+
+</details>
+
+<details>
+<summary>What does `includeSentenceLength` in the `translate` endpoint do when set to true?</summary>
+
+> In the translation response it will include the character length of the input and translated texts. This can be helpful when determining how to display the translated text.
+
+</details>
+
+<details>
+<summary>What profanity filtering options are there in the translation service?</summary>
+
+> There is a `profanityAction` parameter, which can be set to the following:
+> * `NoAction` will translate profanity along with the rest of the text.
+> * `Deleted` will remove profanities from the translation.
+> * `Marked` replace translated profanities with asterisks.
+
+</details>
+
+<details>
+<summary>When might you need to train a custom translation model? What do you need to include as your training data?</summary>
+
+> When the default translation model doesn't cut it. This might happen if you are in an industry with a very specific vocabulary. Your training data will be parallel documents, where one document (the target) is a translation of the other (the source).
+
+</details>
+
+<details>
+<summary>How many training examples are recommended for training a custom model?</summary>
+
+> Azure recommends 10,000 parallel words to train a model.
+
+</details>
+
+<details>
+<summary>When you train a custom translation model, how can you use it to make translations?</summary>
+
+> You can use the `translate` endpoint. When the model is trained it will be assigned a unique `categoryId`, which you will include in the request to the translation service.
+
+</details>
+
+### Speech Recognition (speech to text)
+
+<details>
+<summary>What are the various APIs that Azure AI Speech provides for various speech-related tasks?</summary>
+
+> * Speech to text
+> * Text to speech
+> * Speech translation
+> * Speaker recognition (determine which individual is talking based on their voice)
+> * Intent recognition (determine the semantic meaning of spoken input)
+
+</details>
+
+<details>
+<summary>What type of resource must be provisioned to use Azure AI Speech capabilities?</summary>
+
+> Either an Azure AI Speech resource or a multi-service Azure AI Services resource.
+
+</details>
+
+<details>
+<summary>When using the speech-to-text SDK, what objects will you have to set up?</summary>
+
+> * A `SpeechConfig` object will contain info to authenticate with Azure (the API key).
+> * An `AudioConfig` object will house details on the input audio. It will default to the microphone, but can be changed to a third party microphone or an audio file.
+> * A `SpeechRecognizer` object is a proxy client for the API.
+> * The speech recognizer object has functions you can call like `RecognizeOnceAsync()` which will trasncribe a single utterance.
+
+</details>
+
+<details>
+<summary>What attributes are returned by the `RecognizeOnceAsync()` function?</summary>
+
+> * The `duration` of the recognized speech.
+> * The `reason` for the result, either `RecognizedSpeech` (yay!), `NoMatch`, meaning no speech was recognized in the audio, or `Cancelled`, meaning an error occurred.
+> * The transcribed `text` if the transcription was successful.
+
+</details>
+
+<details>
+<summary>What two APIs support speech recognition (speech to text)?</summary>
+
+> The speech to text API, which is meant for live inference, and the speech to text short audio API, which supports audio less than 60 seconds. You can use the speech to text API for live and batch operations.
+
+</details>
+
+### Speech Synthesis (text to speech)
+
+<details>
+<summary>What two APIs support speech synthesis (text to speech)?</summary>
+
+> The _text to speech_ API, and the _batch synthesis_ API, which is optimized for batch operations.
+
+</details>
+
+<details>
+<summary>What type of object will handle speech synthesis in the Azure AI Speech SDK?</summary>
+
+> You must instantiate a `SpeechSynthesizer` object, which is a proxy client for text to speech API.
+
+</details>
+
+<details>
+<summary>What will be returned by the speech synthesizer's `SpeakTextAsync()` method?</summary>
+
+> * `AudioData` is the output for the speech. This will be the device's speaker or a file based on the configs.
+> * The `Reason` will be either `Cancelled` (error) or `SynthesizingAudioCompleted` if successful.
+
+</details>
+
+<details>
+<summary>What options can be specified in the SpeechConfig object for a speech synthesis task?</summary>
+
+> You can specify:
+> * The audio format, such as the file type and sample rate.
+> * The voice to use in the spoken speech. These can be synthetic or more natural sounding.
+
+</details>
+
+<details>
+<summary>What is Speech Synthesis Markup Language (SSML) and when/why might you use it?</summary>
+
+> SSML is an XML-based syntax that offers greater control over how the spoken output sounds. It is helpful if you want to specify the following options for your spoken output: a speaking style (e.g., _cheerful_), inserting pauses, certain phonemes, or inserting recorded speech or audio.
+
+</details>
+
+<details>
+<summary>How can you change the voice used in speech synthesis?</summary>
+
+> You need to set the `SpeechSynthesisVoiceName` property of the `SpeechConfig` object to the desired voice name.
+
+</details>
+
+### Speech Translation
+
+<details>
+<summary>When using Azure AI Speech SDK for speech translation, what does the SpeechTranslationConfig object specify?</summary>
+
+> * The location and key for you Azure AI Speech resource.
+> * The speech recognition language
+> * The target language(s) into which the speech should be translated
+
+</details>
+
+<details>
+<summary>What object acts as a proxy client for the Azure AI Speech translation API, and what helpful function will translate a single spoken utterance?</summary>
+
+> The `TranslationRecognizer` object, and it's helpful function is `RecognizeOnceAsync()`!
+
+</details>
+
+<details>
+<summary>What attributes will be in the response from Azure AI Speech for a speech translation task?</summary>
+
+> * The `Duration` of the recognized speech.
+> * The `Text` of the recognized speech.
+> * The `Translations` of the recognized speech in the specified target languages.
+> * The `Reason` for the result. `RecognizedSpeech` if successful, `NoMatch` if no spoken word was detected, or `Cancelled` if there was an error.
+
+</details>
+
+<details>
+<summary>If you want to synthesize the translated transcription (i.e., speech-to-speech translation), how can you accomplish this?</summary>
+
+> For 1:1 translation, you can specify the desired voice for the translated speech in the `TranslationConfig` object. Then create an event handler using `TranslationRecognizer.Synthesizing` events. In the event handler result, `GetAudio()` will retrieve the byte stream of translated audio.
+> 
+> For one-to-many translations you need to synthesize the speech manually, meaning you'll have to take the translated text and pass it through a `SpeechSynthesizer` object. 
+
+</details>
+
+## Knowledge Mining with Azure AI Search
 
 <details>
 <summary>Placeholder question</summary>
