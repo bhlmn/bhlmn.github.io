@@ -1265,8 +1265,343 @@ $orderby=print_date desc
 </details>
 
 <details>
+<summary>What are the different hierarchy levels of skill context, and when are they appropriate?</summary>
+
+> * The default is `document`, which means the skill will be applied across the entire document.
+> * Another common one is `document/pages/*`, which will be applied to each chunk of text on each page individually. This is great for sentiment use cases.
+> * Another common context is `document/normalized_images/*`, which will be applied for each image. This is great for image analysis use cases.
+
+</details>
+
+<details>
+<summary>What do the timeout and degreeOfParallelism settings do when creating an ML skill?</summary>
+
+> Timeout sets the number of seconds before a skill will move on to the next document. Degree of parallelism controls how many documents are processed by the skill at once. Best practice is to begin at "one" and scale up as necessary (and as resources allow).
+
+</details>
+
+<details>
+<summary>To use an Azure ML model as a skill, how must it be deployed?</summary>
+
+> At current it has to be deployed as a web service endpoint and the endpoint has to be an Azure Kubernetes Service cluster. ML Studio can create and manage the cluster for you.
+
+</details>
+
+<details>
+<summary>Once you have an ML model to use as a custom skill, how do you add the output of that skill to an index?</summary>
+
+> 1. Add a field to your index where you will store the output from the model.
+> 2. Update the index skillset and add the `#Microsoft.Skills.Custom.AmlSkill`.
+> 3. Change the indexer to map the output from the custom skill to the field you just created.
+> 4. Rerun the indexer!
+
+</details>
+
+<details>
+<summary>What built-in skills are available?</summary>
+
+> There are [lots of them](https://learn.microsoft.com/en-us/azure/search/cognitive-search-predefined-skills)! In general, the following types of skills are built in:
+> * Text analysis/NLP
+> * Image analysis
+> * Translation
+> * Document intelligence
+> * OpenAI Embedding
+
+</details>
+
+### Knowledge Stores
+
+<details>
+<summary>What is a knowledge store?</summary>
+
+> A knowledge store is a table-like output for a skill-enriched search index.
+
+</details>
+
+<details>
+<summary>What is a projection? What is best practice for defining a projection's schema?</summary>
+
+> Projections define the schema for tables, objects, and files in a knowledge store. Since the schema for individual documents can vary bases on the skills applied, the output schema can vary. To help with this, there is a _Shaper_ skill which allows you to map skill output to a well-structured schema for use in a knowledge store.
+
+</details>
+
+<details>
+<summary>How do you create a knowledge store?</summary>
+
+> Create a `knowledgeStore` object in the skillset that defines the projections (tables) and specifies storage account information. Projections can be tables, files, and objects. Each type needs to be defined separately.
+
+</details>
+
+### Advanced AI Search Features
+
+<details>
+<summary>What is term boosting, and how is it implemented?</summary>
+
+> Term boosting gives higher relevancy scores to certain terms in the index. You can specify the fields in which these terms should reside. This is implemented with the Lucene query syntax carat (`^`) (e.g., `Category:luxury^3` to triple the score for items with "luxury" in the category field).
+
+</details>
+
+<details>
+<summary>What are scoring profiles and how can you apply them?</summary>
+
+> A scoring profile allows you to customize how the final scoring of terms is implemented. You can set a custom scoring profile as a default, or you can specify a scoring profile using the Lucene query syntax.
+
+</details>
+
+<details>
+<summary>What are functions that you can use in a scoring profile?</summary>
+
+> * `distance` to boost search results that are nearer to the search location
+> * `freshness` to boost newer or older results
+> * `magnitude` to boost results based on the value in a numeric field
+> * `tag` to boost results based on tags that are in the data
+
+</details>
+
+<details>
+<summary>What is an analyzer in AI Search, and what options do you have if you don't want to use the default?</summary>
+
+> An Analyzer is what breaks the data in the index into more useful terms, such as normalizing text and removing stopwords. By default the Lucene analyzer is used, which is best for most use cases. You can also choose:
+> * A language analyzer, which includes capabilities such as lemmatization, word compounding, and entity recognition for 50 languages.
+> * Specialized analyzers for fields like zip codes and product identifiers.
+> * You can also define and test your own!
+
+</details>
+
+<details>
+<summary>How can you augment and index to include multiple languages?</summary>
+
+> 1. Identify the fields that need translation.
+> 2. Duplicate those fields for each language you want to support.
+> 3. Use Azure AI Services to translate the text and store the output in the created fields.
+> 4. During search, limit the fields that you will search to the appropriate language.
+
+</details>
+
+<details>
+<summary>What geospatial functions does AI Search include and how do you use them?</summary>
+
+> The two functions are:
+> * `geo.distance`, which returns the distance (in km) in a straight line between the input point and search results.
+> * `geo.intersects`, which returns `true` if the location of a search result is within an input polygon.
+> 
+> To use these, there should be a _location_ field in the index with type `Edm.GeographyPoint`. You can use these functions in a filter, in a sort, or in a search term.
+
+</details>
+
+### External Data Sources
+
+<details>
+<summary>How can you get data from sources outside of Azure into an AI Search Index?</summary>
+
+> * Bring those sources into Azure using Azure Data Factory! You can specify a Search Index as a sink in a Data Factory pipeline.
+> * Add data directly to an index using the AI Search REST API.
+> * Use an SDK like C#!
+
+</details>
+
+<details>
+<summary>What are limitations of directly sinking ADF data into an AI Search Index?</summary>
+
+> Complex data types such as arrays, objects, and other complex types aren't supported.
+
+</details>
+
+### AI Search Monitoring, Security, and Maintenance
+
+<details>
+<summary>What data are encrypted whne using AI Search?</summary>
+
+> Data are encrypted in transit and at rest. This includes indexes, data sources, skillsets, and indexers.
+
+</details>
+
+<details>
+<summary>What three areas of focus should be considered when thinking about solution security?</summary>
+
+> 1. Incoming search requests
+> 2. Outbound requests from the search solution to the user
+> 3. Restricting access at the document level to certain searchers
+
+</details>
+
+<details>
+<summary>How can you restrict inbound access to the search service?</summary>
+
+> * Implement a free firewall to restrict who can access the service. This can be done even if the serice is used in a public-facing application or website.
+> * Require authentication using admin or query keys
+
+</details>
+
+<details>
+<summary>How can you determine who can search which documents?</summary>
+
+> You need to update each document with a role or group that specifies permissions. When this is done, you can use these roles/groups in the filter of the search syntax. This requires the user to be authenticated.
+
+</details>
+
+<details>
+<summary>How do you enable diagnostic logging for a search service?</summary>
+
+> * In the Azure portal, under _Diagnostic settings_, select **+ Add diagnostic settings**.
+> * Select **allLogs**, **AllMetrics**, and **Send to Log Analytics workspace**
+
+</details>
+
+<details>
+<summary>How will you know if the search service is being throttled?</summary>
+
+> If user searches are being throttled it will be captured in Log Analytics as a 503 response. If the indexes are being throttled they will show up as 207 responses.
+
+</details>
+
+<details>
+<summary>How can you check the performance of individual queries?</summary>
+
+> The best way is with a client request tool like Postman.
+
+</details>
+
+<details>
+<summary>What typically makes searches take longer?</summary>
+
+> Searches take longer for indexes that are larger (more fields, more records) and complex (more fields searchable, facetable, etc.). To reduce search time, reduce the number of records and/or the complexity.
+
+</details>
+
+<details>
+<summary>What are ways to improve query performance?</summary>
+
+> * Only specify the fields that you need to be searchable.
+> * Only return the fields that are absolutely necessary.
+> * Avoid prefix searches or regular expression since they are more computationally expensive.
+> * Avoid high skip values.
+> * Limit facetable and filterable fields to those with a small number of discrete values.
+> * Use search functions instead of individual values in filter criteria.
+
+</details>
+
+<details>
+<summary>Which perform better, a smaller tier service with more partitions or a bigger tier service with fewer paritions, even if they cost the same?</summary>
+
+> The larger tier service will have more powerful compute resources, memory, and provides opportunities to scale for future growth. Go with that one!
+
+</details>
+
+<details>
+<summary>When estimating costs for an AI Search solution, what are all the different components that can contribute to costs?</summary>
+
+> * The search service itself.
+> * Data storage costs (e.g., Blob Storage or Azure SQL)
+> * Skills.
+
+</details>
+
+<details>
+<summary>What SLAs are guaranteed for search solutions?</summary>
+
+> If you have two replicas there is a 99.9% availability guarantee for queries. Three replicas or more gives 99.9% guarantee for queries and indexing.
+
+</details>
+
+<details>
+<summary>What is the best way to manage service costs?</summary>
+
+> Monitor and set budget alerts for search resources.
+
+</details>
+
+<details>
+<summary>Which three metrics can be viewed in graphs without any other configuration?</summary>
+
+> Search latency, queries per second, and percentage of throttled queries.
+
+</details>
+
+### Semantic Ranking
+
+<details>
+<summary>What is semantic reranking?</summary>
+
+> Semantic reranking leverages natural language understanding to re-rank the results after the initial BM25 ranking function.
+
+</details>
+
+<details>
+<summary>What are semantic captions and answers?</summary>
+
+> Semantic captions extract summary sentences from the the document and highlight the most relevant text in summary sentences.
+> 
+> If the search query appears to be a question, and the search results contain text that appears to be the answer, a semantic answer will be created and returned.
+
+</details>
+
+<details>
+<summary>How does semantic ranking work?</summary>
+
+> The top 50 results from the BM25 ranking are grabbed. These results are converted into strings, trimmed to 256 tokens, then passed to an ML model to determine the semantic caption/answer. Then the results are ranked based on the relevance of the caption/answer and returned in descending order of relevance.
+
+</details>
+
+<details>
+<summary>Will semantic ranking result in returning results not originally grabbed by the BM25 algorithm?</summary>
+
+> No.
+
+</details>
+
+
+<details>
+<summary>How many semantic ranking queries per month do you get for free?</summary>
+
+> One thousand! Any more and you should choose standard pricing.
+
+</details>
+
+<details>
+<summary>How do you add semantic ranking to an index?</summary>
+
+> In the Azure portal, select the index of interest and select the **Semantic configurations** tab. Then go from there!
+
+</details>
+
+### Vector Search and Retrieval
+
+<details>
+<summary>What is vector search?</summary>
+
+> Vector search is the capability to index, store, and retrieve vector embeddings from a search index.
+
+</details>
+
+<details>
+<summary>What types of data can benefit from vector searches?</summary>
+
+> Whatever you can make embeddings out of! This includes text, video, images, and audio data sources.
+
+</details>
+
+<details>
 <summary>Placeholder question</summary>
 
 > Answer
 
 </details>
+
+<details>
+<summary>Placeholder question</summary>
+
+> Answer
+
+</details>
+
+## Other questions from the practice exam:
+* What do `opinionMining`, `StringIndexType`, and `loggingOptOut` attributes in the Text Analysis runtime do?
+* What are the entity categories recognized as PII in Azure AI Language?
+* If there is one piece of text that has positive sentiment, and the rest are neutral, what will the overall sentiment be for the document? (positive)
+* What is the Bilingual Evaluation Understudy (BLEU) score, what does it do, and what is its scale?
+* With CLU do you need to train different models to support multilingual use cases?
+* If you are using the Azure CLI and you need to know the endpoint for the cognitive services resource, what must you specify? (The name of the resource and the resource group)
+* What does a "mismatch" mean when using an API key for an Azure AI Services container application? (It means the API key is for the wrong resource type.)
+* Which colors can the Image Analysis API detect as the dominant background color of an image? (black, blue, brown, gray, green, orange, pink, purple, red, teal, white, and yellow.)
+* When making requestions to Azure OpenAI models, what three HTTP header properties need included? (The API version, the OpenAI resource name, and the deployment ID). What needs to be included in the HTTP body request? (The prompt!)
