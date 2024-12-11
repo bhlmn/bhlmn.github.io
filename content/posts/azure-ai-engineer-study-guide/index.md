@@ -1130,6 +1130,141 @@ Below are questions to know the answer to pass the [Azure AI Engineer (AI-102)](
 ## Knowledge Mining with Azure AI Search
 
 <details>
+<summary>What are the pricing tiers for Azure AI Search resources, and what do they offer?</summary>
+
+> * The free tier (F) is great for trying out the product.
+> * The basic tier (B) supports up to 15 indexes and 5 GB of indexed data.
+> * The standard tier (S) is for enterprise-scale solutions. There are multiple variants in this tier for larger index sizes and quantity.
+
+</details>
+
+<details>
+<summary>In the context of search services, what are replicas and partitions?</summary>
+
+> Replicas are the number of nodes in a cluster. Increasing the number of replicas increase the number of concurrent queries the service can handle.
+> Partitions divide an index into multiple storage locations, allowing queries and index rebuilds to be distributed.
+
+</details>
+
+<details>
+<summary>What are the components of an Azure AI Search solution?</summary>
+
+> * A data source, which is JSON data. But this can be data in Azure blob storage, Azure SQL tables, or Cosmos DB documents.
+> * AI skills to enrich data with additional insights.
+> * An indexer, which can run at regular intervals or on demand.
+> * An index (the product of an indexer)
+
+</details>
+
+<details>
+<summary>What are some examples of AI skills that you might use in an AI Search solution?</summary>
+
+> * Detecting the language of text.
+> * Extracting key phrases from text.
+> * Determining the sentiment of text.
+> * Identify entities in the text.
+> * Generate descriptions of images or extract text from images.
+> * Custom skills.
+
+</details>
+
+<details>
+<summary>What attributes can be configured for the fields in an index?</summary>
+
+> * `key` - fields that define a unique key
+> * whether the field should be `searchable`
+> * wether the field should be `filterable`
+> * wether the field should be `sortable`
+> * wether the field should be `facetable`, which gives the user the ability to drill-down/filter results based on values.
+> * wether the field should be `retrievable`, or included in results
+
+</details>
+
+<details>
+<summary>What are common parameters included in a full text search in Azure AI Search? (Lucene query syntax)</summary>
+
+> * The `search` term
+> * Whether the query is using the simple or full query syntax (`queryType`)
+> * `searchFields` are the fields to be searched
+> * Secify the fields to return in the result with `select`
+> * For multi-word search terms, `searchMode` will allow you to specify if you want to match documents according to _Any_ or _All_ of the terms.
+
+</details>
+
+<details>
+<summary>What are the four stages for how a query is processed?</summary>
+
+> 1. The search term is evaluated and reconstructed as multiple subqueries.
+> 2. Query terms are refined and normalized (e.g., converted to lowercase, stopwords are removed, words are trimmed down to their root, etc.). This is called _lexical analysis_.
+> 3. Terms are matched against the indexed documents, and matching documents are identified.
+> 4. Matching documents are scored, sorted, and returned.
+
+</details>
+
+<details>
+<summary>How can you present facet options to a user?</summary>
+
+> You can search for all documents (*) and facet by the appropriate field. This is best done on fields with a smallish number of discrete values. When the user selects one of these facets, include that in the filter parameter of the next search.
+
+</details>
+
+<details>
+<summary>What syntax would you use if you wanted to filter an AI Search index to include books printed in 2024 and sort them by the latest print date?</summary>
+
+```
+$filter=print_year eq '2024'
+$orderby=print_date desc
+```
+
+</details>
+
+<details>
+<summary>What functionality is provided when you add a suggester to an index?</summary>
+
+> * _Suggestions_ allow you to get a list of suggested results as the user types in the search box (without submitting the search query)
+> * Or you can `autocomplete` partially typed search terms based on the vales in indexed fields.
+
+</details>
+
+<details>
+<summary>What is custom scoring?</summary>
+
+> The default relevance scoring algorithm is [term-frequency/inverse-document-frequency](https://en.wikipedia.org/wiki/Tf%E2%80%93idf#:~:text=In%20information%20retrieval%2C%20tf%E2%80%93idf,the%20rest%20of%20the%20corpus.) (TF/IDF). But you can customize how the score is calculated!
+> 
+> You can also _boost_ results as you need. For example, you can increase the relevancy score for more recent documents.
+
+</details>
+
+<details>
+<summary>How can you appropriately handle synonyms in a search index?</summary>
+
+> You can define synonym maps to link related terms together.
+
+</details>
+
+### Custom Skills
+
+<details>
+<summary>What are some use cases where a custom skill could be helpful for enriching an AI Search index?</summary>
+
+> * You need to use document inelligence to extract data from forms.
+> * Using an Azure Machine Learning model to get predicted values into an index.
+> * Perform text classification!
+
+</details>
+
+<details>
+<summary>How do you define a custom skill, and what must be included?</summary>
+
+> Custom skills are defined in JSON. They must include:
+> * The endpoint and parameters for calling the inference service.
+> * Specify at which point in the document hierarchy the skill should be called. This is called the _context_.
+> * Assign input values (fields from the data sources)
+> * Specify which fields to store the outputs.
+
+</details>
+
+<details>
 <summary>Placeholder question</summary>
 
 > Answer
