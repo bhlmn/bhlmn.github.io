@@ -1,6 +1,6 @@
 +++
 title = "Azure AI Engineer Study Guide"
-date = 2024-12-09T12:22:00-07:00
+date = 2024-12-16T12:22:00-07:00
 draft = false
 +++
 
@@ -1581,27 +1581,271 @@ $orderby=print_date desc
 
 </details>
 
-<details>
-<summary>Placeholder question</summary>
+## Misc questions based on the practice exams
 
-> Answer
+<details>
+<summary>You use Azure AI services on an app that is deployed to an Azure VM. Firewall rules are enabled. What should you do to ensure the app can access the AI service through a service endpoint?</summary>
+
+> There are two potential routes. One is adding an IP range to the firewall rules to include the virtual machine. The better answer is allowing access to a virtual network, which is where the virtual machine resides.
 
 </details>
 
 <details>
-<summary>Placeholder question</summary>
+<summary>When making a request to Azure OpenAI, what pieces of information need to be included in the header?</summary>
 
-> Answer
+> * The OpenAI resource name, 
+> * the API version, and 
+> * the deployment ID.
 
 </details>
 
-## Other questions from the practice exam:
-* What do `opinionMining`, `StringIndexType`, and `loggingOptOut` attributes in the Text Analysis runtime do?
-* What are the entity categories recognized as PII in Azure AI Language?
-* If there is one piece of text that has positive sentiment, and the rest are neutral, what will the overall sentiment be for the document? (positive)
-* What is the Bilingual Evaluation Understudy (BLEU) score, what does it do, and what is its scale?
-* With CLU do you need to train different models to support multilingual use cases?
-* If you are using the Azure CLI and you need to know the endpoint for the cognitive services resource, what must you specify? (The name of the resource and the resource group)
-* What does a "mismatch" mean when using an API key for an Azure AI Services container application? (It means the API key is for the wrong resource type.)
-* Which colors can the Image Analysis API detect as the dominant background color of an image? (black, blue, brown, gray, green, orange, pink, purple, red, teal, white, and yellow.)
-* When making requestions to Azure OpenAI models, what three HTTP header properties need included? (The API version, the OpenAI resource name, and the deployment ID). What needs to be included in the HTTP body request? (The prompt!)
+<details>
+<summary>When making a request to Azure OpenAI, what is the only body attribute that is required?</summary>
+
+> The prompt!
+
+</details>
+
+<details>
+<summary>What does a "mismatch" mean when using an API key for an Azure AI Services container application?</summary>
+
+> It means the API key is valid, but it is for the wrong type of resource!
+
+</details>
+
+<details>
+<summary>With conversational language understanding do you need to train different models to support multilingual use cases?</summary>
+
+> Why no! CLU models are multilingual by default!
+
+</details>
+
+<details>
+<summary>If you have an Azure App Services web application, and you want to authenticate the AI services it uses via Microsoft Entra ID, what should you do?</summary>
+
+> Enable a managed identity from the application and assign role-based access control (RBAC) permissions to Azure AI Services.
+
+</details>
+
+<details>
+<summary>What are two prerequisites to enabling diagnostic logging on an Azure AI Services resource?</summary>
+
+> 1. A Log Analytics workspace.
+> 2. An Azure Storage account.
+
+</details>
+
+<details>
+<summary>Can an API key be invalid if it is for the correct type of resource, but for the wrong region?</summary>
+
+> Yes!
+
+</details>
+
+<details>
+<summary>When will Azure OpenAI automatically update a model version even if auto-update is disabled?</summary>
+
+> This can happen when the model version reaches its retirement date.
+
+</details>
+
+<details>
+<summary>In the DALL-E model's response, how does it provide images and thumbnails, and in what response object?</summary>
+
+> These will be found in the `result` element, and it will contain a collection of URLs that link to the PNG image(s) generated from the prompt.
+
+</details>
+
+<details>
+<summary>What are valid attributes to include in the body of a call to the DALL-E 3 Azure OpenAI model?</summary>
+
+> * The user's prompt
+> * The quality of the generated images
+> * The style of the generated images
+> * There are a ton of them.
+
+</details>
+
+<details>
+<summary>What is Azure OpenAI's "User your data" feature?</summary>
+
+> It is a REST API/SDK that helps with RAG use cases. You can upload files to Azure OpenAI studio, and data will be cracked, chunked, and embedded. Then you can develop and deploy an Azure OpenAI model for prompting. 
+
+</details>
+
+<details>
+<summary>What are helpful parameters with Azure OpenAI on your data?</summary>
+
+> * You can limit responses to only include those relevant to the data you provided. For example, if the user asks about the weather, the model won't respond.
+> * You can specify the number of documents to retrieve (3, 5, 10, or 20).
+> * You can specify how strict (`strcitness`) the model is in filtering out search documents based on their similarity scores.
+
+</details>
+
+<details>
+<summary>What are three best practices for prompt engineering strategies?</summary>
+
+> 1. Be Descriptive – the more details the better!
+> 2. Be Specific – tell the model exactly what to expect and what you want it to do.
+> 3. Order Matters – the order in which you present information will affect the output!
+
+</details>
+
+<details>
+<summary>When running an Azure AI Search indexer for the first time, what exact steps are occuring behind the scenes?</summary>
+
+> * Document cracking (opening files and extracting content)
+> * Field mapping
+> * Skillset execution
+> * Output field mapping
+> * Pushing to an index
+
+</details>
+
+<details>
+<summary>When defining a skillset for Azure AI Search, what are the minimum sections that need to be included in the definition?</summary>
+
+> The `name`, `description`, and `skills`. If you are sending skill output to a knowledge store then you must include the `knowledgeStore` parameter. If you are using some billable skills then you need to include `cognitiveServices`.
+
+</details>
+
+<details>
+<summary>What three document formats does the Azure AI Document Intelligence pre-built read model support?</summary>
+
+> * Excel
+> * Word
+> * PDFs
+
+</details>
+
+<details>
+<summary>In a text analysis-based app you are performing sentiment analysis. What attributes can you include in the API requests the app makes and what do those attributes do?</summary>
+
+> * `opinionMining` will make sentiment very granular (i.e., identifying both positive and negative sentiments in a single sentence)
+> * `loggingOptOut` will opt out of logging
+
+</details>
+
+<details>
+<summary>What are different types of PII that the PII detection feature will detect automatically?</summary>
+
+> * `Person` – names
+> * `Age` – people's ages
+> * `DateTime` – dates and time values
+> * `PhoneNumber` – phone numbers
+> * `PersonType` – job types/roles
+> * `Organization` – companies, political groups, bands, sports teams, etc.
+> * `Email`
+> * `URL`
+> * `IPAddress`
+
+</details>
+
+<details>
+<summary>What are common errors with speech-to-text, and how do you resolve them?</summary>
+
+> * A _substitution error_ is when a word is different in the text than in the speech. This typically happens when domain-specific terms aren't in the corpus and you need to provide examples of these terms.
+> * An _insertion error_ occurs when words are added to the text that aren't in the speech. These can happen in noisy environments and words from other conversations are included in the text.
+> * A _deletion error_ occurs when words in the speech aren't in the text. This typically means weak audio signal strength, and you should get the microphone closer to the source.
+
+</details>
+
+<details>
+<summary>In speech-to-text tasks, what is the word error rate (WER), and how is it calculated?</summary>
+
+> It is the number of insertions, deletions, and substitions divided by the total number of words.
+
+</details>
+
+<details>
+<summary>What is a good WER in speech-to-text tasks?</summary>
+
+> 5% to 10% is considered good quality and ready to use.
+
+</details>
+
+<details>
+<summary>Does the base speech-to-text model support noisy environments?</summary>
+
+> Not really. If you have a lot of ambient noise in your data you might want to train a custom speech-to-text model.
+
+</details>
+
+<details>
+<summary>What is pattern matching in CLU?</summary>
+
+> Pattern matching uses the Speech SDK and is helpful when you are only interested in matching strictly what the user said.
+
+</details>
+
+<details>
+<summary>What is the Bilingual Evaluation Understudy (BLEU) score, what does it do, and what is its scale?</summary>
+
+> BLEU is an algorithm for evaluating machine translation. It ranges from 0 to 100, with 100 being perfect. A score between 40 and 60 indicates a high-quality translation.
+
+</details>
+
+<details>
+<summary>Which colors can the Image Analysis API detect as the dominant background color of an image?</summary>
+
+> black, blue, brown, gray, green, orange, pink, purple, red, teal, white, and yellow.
+
+</details>
+
+<details>
+<summary>What two types of CLU models are there?</summary>
+
+> Standard and advanced. Standard is the default and works for English language only. It is provided free of charge. Advanced training leverages the latest in ML technology, will result in higher scores, and will enable multilingual capabilities. It is more expensive to do it this way.
+
+</details>
+
+<details>
+<summary>What is the orchestration workflow feature in Azure AI Language?</summary>
+
+> Orchestration workflows allow you to connect CLU, Q&U, and language understanding applications. They can be developed in Language Studio.
+
+</details>
+
+<details>
+<summary>If a multilingual CLU app is performing poorly, what can you do?</summary>
+
+> Provide more utterances in languages that are performing poorly. Reminder ... CLU applications are multilingual by default.
+
+</details>
+
+<details>
+<summary>What is active learning in the context of a Q&A app?</summary>
+
+> Active learning will automatically generate suggestions of data based on user queries that don't have great answers. It takes at least 30 minutes for these suggestions to start showing up once it has been enabled (it is enabled by default for custom QA models).
+
+</details>
+
+<details>
+<summary>What influences the price of a QA service?</summary>
+
+> Pricing depends on the throughput (utilization), the size of the knokwledge base, and the number of knowledge bases.
+
+</details>
+
+<details>
+<summary>For the Azure AI Face service, what are the different detection models, and what are their strengths?</summary>
+
+> * `detection_01` is the default model that works best overall.
+> * `detection_02` improves accuracy on small, side-view and blurry faces. It doesn't return face landmarks.
+> * `detection_03` has even further improved accuracy, can detect masks, but not other accessories.
+
+</details>
+
+<details>
+<summary>What does the spatial analysis feature of Azure AI Vision do?</summary>
+
+> It detects the presence of people in a video feed.
+
+</details>
+
+<details>
+<summary>If users of a Document Intelligence app note that they can't process some documents, what could be the problem?</summary>
+
+> For an S0 instance of the app it can handle 500mb documents with 2k pages (i.e. most documents), so the likely issue is password-protected files.
+
+</details>
