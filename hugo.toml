@@ -20,6 +20,9 @@ ignoreErrors = ["additional-script-loading-error"] # ignore error of loading add
     path = "github.com/hugo-sid/hugo-blog-awesome"
     disable = false
 
+[taxonomies]
+  tag = 'tags'
+
 [services]
 
 # set markup.highlight.noClasses=false to enable code highlight
@@ -75,7 +78,7 @@ ignoreErrors = ["additional-script-loading-error"] # ignore error of loading add
   # Setting it to 'auto' applies the color scheme based on the visitor's device color preference.If you don't specify anything, ignore this parameter, or leave it blank,
   # the default value is set to 'auto'.
   # You can take a look at layouts/index.html for more information.
-  description = "Minimal Hugo blog theme with light and dark mode support"
+  description = "Bryan Holman"
   mainSections = ['posts']
   toc = true # set to false to disable table of contents 'globally'
   tocOpen = false # set to true to open table of contents by default
@@ -95,9 +98,9 @@ ignoreErrors = ["additional-script-loading-error"] # ignore error of loading add
 [Languages.en-us.params.author]
   avatar = "bryan.jpeg" # put the file in assets folder; also ensure that image has same height and width
   # Note: image is not rendered if the resource(avatar image) is not found. No error is displayed.
-  intro = "Hey there, I'm Bryan"
+  intro = "Hey there, I'm Bryan 👋"
   name = "Bryan Holman"
-  description = "I'm a Data Scientist and Data/AI Engineer based in Portland, OR. On this site I share my thoughts about code, AI, exercise, music, and life."
+  description = "I'm an AI Engineer and Architect based in Portland, OR. On this site I share my thoughts about code, AI, exercise, music, and life."
 
 # Allow to override webmanifest options
 [Languages.en-us.params.webmanifest]
