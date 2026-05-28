@@ -120,6 +120,68 @@ Below are questions to know the answer to pass the [Azure AI Engineer (AI-102)](
 ## Building with the Claude API
 
 <details>
+<summary>What is the five step process for using the Anthropic API in a web or mobile app?</summary>
+
+> 1. Make a request to a server we own/maintain. The client _should not_ access the Antrhopic API directly as it would reveal the API key.
+> 2. Request to the Anthropic API from the server using the Anthropic SDK.
+> 3. The Anthropic model does the things.
+> 4. The Anthropic API responds to the server.
+> 5. Your server responds to the client.
+
+</details>
+
+<details>
+<summary>What are necessary inputs to the messages.create function?</summary>
+
+> 1. The name of the model to use to generate text.
+> 2. The maximum number of tokens allowed.
+> 3. The input messages to the model.
+
+</details>
+
+<details>
+<summary>Does the max tokens argument instruct Claude to keep a response to around that length?</summary>
+
+> No. Instead it acts as a safety net. If Claude is generating a lengthy response, the response will stop at the max tokens argument.
+
+</details>
+
+<details>
+<summary>Does the Anthropic API natively track a conversation?</summary>
+
+> No! When using the API you need to manually track and provide the desired message history.
+
+</details>
+
+<details>
+<summary>How do you define a system prompt in the messages.create call?</summary>
+
+> Define a system prompt, then include `system=system_prompt` in the `create()` call.
+
+</details>
+
+<details>
+<summary>How do you stream Claude's response events in real time?</summary>
+
+> Use `client.messages.stream()` inside of a `with` block. You can collect the final response using `stream.get_final_response()`.
+
+</details>
+
+<details>
+<summary>Question</summary>
+
+> Answer
+
+</details>
+
+<details>
+<summary>Question</summary>
+
+> Answer
+
+</details>
+
+<details>
 <summary>Question</summary>
 
 > Answer
